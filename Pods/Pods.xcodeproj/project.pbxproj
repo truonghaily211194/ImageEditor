@@ -1,0 +1,1100 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1165ED1996A7A7097C0042B6051C2F90 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BDA8230569BF877C4DA19761A70ED7 /* Accelerate.framework */; };
+		117844CCDD2AA79368ACFE46BABD825E /* UIColor+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246D2324876A10B4A11EB2BCF0B31DB /* UIColor+ZLImageEditor.swift */; };
+		2535E481B22831F94742181CEB562577 /* Pods-ImageEditor-ImageEditorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C302CE3AFB14D486F974FA9494BED53 /* Pods-ImageEditor-ImageEditorUITests-dummy.m */; };
+		28F7023D26FCFB5F69E4E7EC2290294D /* ZLProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F83CC28BB0720F6DC35CFBA5E8797 /* ZLProgressHUD.swift */; };
+		2A44043C33F9551A5BB5B1859C956145 /* Cell+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD32DC6AC67C6AF4A9761348E2369E /* Cell+ZLImageEditor.swift */; };
+		2AAE204D8024D4F0E43B5B98A56EEB75 /* ZLClipImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509FC93A2E3005771C5118FEFAB4658 /* ZLClipImageViewController.swift */; };
+		2AE9BB5DAF8D9956FF5CBD5FF1364AFC /* ZLWeakProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB6C0E418E963CC106C05CE21463A7 /* ZLWeakProxy.swift */; };
+		2EDACC0D2443C9D72257D3FEAE1C876C /* ZLInputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF441958EF55AE4D51D7A1738A88E60 /* ZLInputTextViewController.swift */; };
+		48960C9E3576134D137117E6CAC12871 /* ZLImageEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A17A5D11391F3BC7EBA46877A46F661A /* ZLImageEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A89BFAA8FA313887013A2AD92F75109 /* ZLImageEditorConfiguration+Chaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF521F083845D12F9D546662698E74 /* ZLImageEditorConfiguration+Chaining.swift */; };
+		55F40007C4E9CF2A803B86E06DD1A772 /* ZLFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A34AE4DE33DC2259138E9550C7627 /* ZLFilter.swift */; };
+		6904AFDA181519FB5C37442069B48CB3 /* ZLImageEditorUIConfiguration+Chaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = E301BF54A06BAC1AB1926149A73CE413 /* ZLImageEditorUIConfiguration+Chaining.swift */; };
+		6A7B4E5B8659DB3D6E9349D3A4BD3915 /* ZLImageEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D48D6031A2CC91968E870B8DB8BCE0B5 /* ZLImageEditor.bundle */; };
+		6EA640B4C13BBF0E08062B39AF351C11 /* ZLImageEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 06B73DFB6EC23402E4EA55485525A415 /* ZLImageEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F474ED21621B2F476645FE4E774C214 /* Pods-ImageEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E8813C754D41DDBC3CA117E5FC7F25 /* Pods-ImageEditor-dummy.m */; };
+		6F81CD384DE4EB229E7DC84E5BC66456 /* ZLClipImageDismissAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64AF08948B2189B97C291CD914266DE /* ZLClipImageDismissAnimatedTransition.swift */; };
+		6FEB560B40E0912F7C195B8AC246FA45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */; };
+		7234A3D026F427C7F24BBA99C608FB1E /* Pods-ImageEditorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD7CA582E5F6C0277DDDB21121D96D4 /* Pods-ImageEditorTests-dummy.m */; };
+		729B5CACC2095D5A5557172EE53D54B3 /* ZLImageEditorUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B160B7C13522816DC25317D79CD4D /* ZLImageEditorUIConfiguration.swift */; };
+		7B9BACCFD733188B40B87926726F3A6E /* String+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF46C173243C7DDA9268B1B4190D33 /* String+ZLImageEditor.swift */; };
+		7C1E234F34357C79363BB252A8CD9972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		823C2711EC2A7BE2C057FC37A567BCAF /* UIImage+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3115F7DBC38B5B9F2035A9EF4BA92C /* UIImage+ZLImageEditor.swift */; };
+		82C4DF36F5047182096BDB3D1936E9F3 /* ZLImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681A02CDDAE56BB6528E986DCB74886 /* ZLImageStickerView.swift */; };
+		88E9C6AC71E3390A0F08EAC0751C1FF5 /* ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E726F983A8756B44377DD72DE45EEA64 /* ZLImageEditor.swift */; };
+		8904258F0110063B230704D50800A448 /* ZLAdjustSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A5301E2AFBE9B0AF7C70D7C93356AD /* ZLAdjustSlider.swift */; };
+		9F6BE430F875A5576049AECD4498F011 /* ZLImageEditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA53C6DB9E1B91763487F0BC212A980 /* ZLImageEditorConfiguration.swift */; };
+		A17FE6A29FE2AD312A96B9E2C57FDF4E /* ZLEnlargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C123D08A887D6643C53ED2E708CF6DB /* ZLEnlargeButton.swift */; };
+		AF1556BE75FC0E603E7272FEC54D91F2 /* ZLImageEditorDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC712246F9D6EDDC7056597F2F59166 /* ZLImageEditorDefine.swift */; };
+		B25F48342759E4903DA902235E84FAD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		B468AF4D7C4B037714486915755FBE03 /* UIView+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D372E8209E941C79866E816FBCAFFC /* UIView+ZLImageEditor.swift */; };
+		B4EF40D0085D6CA39502C4C41D3F4A09 /* ZLTextStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BA7FDEA28E4CF3909C1BF74E4DC579 /* ZLTextStickerView.swift */; };
+		BA80C85E6449E9BD30D6A490F20C3685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		C18CC09AECE9509245CC233562DCE135 /* ZLEditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF6BA002FDD7C503E808C7E3F46EF4 /* ZLEditImageViewController.swift */; };
+		CC23CE9FA917FE307D0BC44E813C8465 /* ZLBaseStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD10EA0761B9CAC146DD9E441D0C7B /* ZLBaseStickerView.swift */; };
+		CF5A79F9531C42F3CCC29CB758DF9C58 /* CGFloat+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78855AC5506A3115A0ED4FD20A337398 /* CGFloat+ZLImageEditor.swift */; };
+		CF74201091AE781A1434EEE26285F6C9 /* Pods-ImageEditor-ImageEditorUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBC6FF5F002DA436D33D39456767D34 /* Pods-ImageEditor-ImageEditorUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC992E2FA164DF28EF807E443BA732A5 /* ZLEditToolCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AA914ADAFE7BA717AEB87C05353E17 /* ZLEditToolCells.swift */; };
+		EE6217C4128403DC6C0E710964309193 /* Pods-ImageEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E97B9ACF7547978B06148D0D4ACBB735 /* Pods-ImageEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF1F5EFD72711B85E157177856CA7CB7 /* ZLImageEditorLanguageDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760026D6BF2FA3E118C2605776479DC8 /* ZLImageEditorLanguageDefine.swift */; };
+		F31FDB3E3FE6CE9D375C9D8F066F0C5C /* ZLImageEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A0EC294B78154D89A1D3CD5F383120A /* ZLImageEditor-dummy.m */; };
+		F50EE3D47CFFEFB4FE8FA0C392039730 /* Pods-ImageEditorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E69452934E078D04CE8D9E2EE4FE073C /* Pods-ImageEditorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBE419F578F715F501AB2BAEEEF27B6D /* Bundle+ZLImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032D290CF4A04E2C51EDF9C77BAC8CA /* Bundle+ZLImageEditor.swift */; };
+		FD8E81F46D896A5603F3DAA9B49BE5B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BD3334333D8A69F16AB3E0DA0CB6F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D2FA43D2C8B012E70086FECDDEB0F31;
+			remoteInfo = ZLImageEditor;
+		};
+		7B3B3354D1187BF92E8E3E713C39BC0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D2FA43D2C8B012E70086FECDDEB0F31;
+			remoteInfo = ZLImageEditor;
+		};
+		852926F4FEA088E458B8851A5D54ED28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 547C37DD139D8676EDF523E6EDA48A96;
+			remoteInfo = "Pods-ImageEditor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06B73DFB6EC23402E4EA55485525A415 /* ZLImageEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLImageEditor.h; path = Sources/ZLImageEditor.h; sourceTree = "<group>"; };
+		07350652A1F110C97E1376BF63A48444 /* Pods-ImageEditorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ImageEditorTests.modulemap"; sourceTree = "<group>"; };
+		0AF7D5CE650344019FD47D8DB4329E2F /* ZLImageEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZLImageEditor.modulemap; sourceTree = "<group>"; };
+		1032D290CF4A04E2C51EDF9C77BAC8CA /* Bundle+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+ZLImageEditor.swift"; path = "Sources/Extensions/Bundle+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		14BDA8230569BF877C4DA19761A70ED7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		153F83CC28BB0720F6DC35CFBA5E8797 /* ZLProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLProgressHUD.swift; path = Sources/General/ZLProgressHUD.swift; sourceTree = "<group>"; };
+		1563576725DBE0D0E76D579711BD7FF2 /* ZLImageEditor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZLImageEditor-Info.plist"; sourceTree = "<group>"; };
+		164A5DFEE94420018E000B57194EB55B /* Pods-ImageEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ImageEditor.modulemap"; sourceTree = "<group>"; };
+		1742A77CBD94DB52196819DB387A630F /* Pods-ImageEditor-ImageEditorUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ImageEditor-ImageEditorUITests.modulemap"; sourceTree = "<group>"; };
+		180B160B7C13522816DC25317D79CD4D /* ZLImageEditorUIConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageEditorUIConfiguration.swift; path = Sources/General/ZLImageEditorUIConfiguration.swift; sourceTree = "<group>"; };
+		2135CF06F772BBA7EAA0A46B29B6D0C5 /* Pods-ImageEditor-ImageEditorUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditor-ImageEditorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BF441958EF55AE4D51D7A1738A88E60 /* ZLInputTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLInputTextViewController.swift; path = Sources/General/ZLInputTextViewController.swift; sourceTree = "<group>"; };
+		2C123D08A887D6643C53ED2E708CF6DB /* ZLEnlargeButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEnlargeButton.swift; path = Sources/General/ZLEnlargeButton.swift; sourceTree = "<group>"; };
+		2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2EBC6FF5F002DA436D33D39456767D34 /* Pods-ImageEditor-ImageEditorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImageEditor-ImageEditorUITests-umbrella.h"; sourceTree = "<group>"; };
+		36BA7FDEA28E4CF3909C1BF74E4DC579 /* ZLTextStickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLTextStickerView.swift; path = Sources/General/ZLTextStickerView.swift; sourceTree = "<group>"; };
+		3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLImageEditor; path = ZLImageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEF46C173243C7DDA9268B1B4190D33 /* String+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+ZLImageEditor.swift"; path = "Sources/Extensions/String+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		455941A3F64F478ABCC0825BD456A635 /* Pods-ImageEditor-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditor-acknowledgements.plist"; sourceTree = "<group>"; };
+		4ABB6C0E418E963CC106C05CE21463A7 /* ZLWeakProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLWeakProxy.swift; path = Sources/General/ZLWeakProxy.swift; sourceTree = "<group>"; };
+		4B558346328C72B2E466BD8306DBA906 /* Pods-ImageEditor-ImageEditorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImageEditor-ImageEditorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		61A9C64545A4D5F5C44B99CAF9D12815 /* Pods-ImageEditor-ImageEditorUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditor-ImageEditorUITests-Info.plist"; sourceTree = "<group>"; };
+		68E8813C754D41DDBC3CA117E5FC7F25 /* Pods-ImageEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImageEditor-dummy.m"; sourceTree = "<group>"; };
+		6A0EC294B78154D89A1D3CD5F383120A /* ZLImageEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLImageEditor-dummy.m"; sourceTree = "<group>"; };
+		6DB21DFDB6C1775F058CA56AE426A940 /* Pods-ImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		7087C827E0934FA86F73BDDF212F1C47 /* Pods-ImageEditor-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImageEditor-frameworks.sh"; sourceTree = "<group>"; };
+		760026D6BF2FA3E118C2605776479DC8 /* ZLImageEditorLanguageDefine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageEditorLanguageDefine.swift; path = Sources/General/ZLImageEditorLanguageDefine.swift; sourceTree = "<group>"; };
+		78855AC5506A3115A0ED4FD20A337398 /* CGFloat+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+ZLImageEditor.swift"; path = "Sources/Extensions/CGFloat+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		7B46532E1703A6F94B07131392038592 /* Pods-ImageEditor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ImageEditor"; path = Pods_ImageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8544FC26F3D077B545F8F539B60A1DAD /* Pods-ImageEditor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditor-Info.plist"; sourceTree = "<group>"; };
+		9044D69F6A250C175BAF116A989A02A4 /* Pods-ImageEditorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImageEditorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93C70AEEEB30A0818D94BD6A4E4B1760 /* Pods-ImageEditorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageEditorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9509FC93A2E3005771C5118FEFAB4658 /* ZLClipImageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLClipImageViewController.swift; path = Sources/General/ZLClipImageViewController.swift; sourceTree = "<group>"; };
+		9B45C38A0B3EABA34D5F2DE23C1FC5EB /* Pods-ImageEditorTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ImageEditorTests"; path = Pods_ImageEditorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C223BD18DC6A201C408E0B5B6876806 /* ZLImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLImageEditor.debug.xcconfig; sourceTree = "<group>"; };
+		9C302CE3AFB14D486F974FA9494BED53 /* Pods-ImageEditor-ImageEditorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImageEditor-ImageEditorUITests-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA53C6DB9E1B91763487F0BC212A980 /* ZLImageEditorConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageEditorConfiguration.swift; path = Sources/General/ZLImageEditorConfiguration.swift; sourceTree = "<group>"; };
+		A0AA914ADAFE7BA717AEB87C05353E17 /* ZLEditToolCells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditToolCells.swift; path = Sources/General/ZLEditToolCells.swift; sourceTree = "<group>"; };
+		A17A5D11391F3BC7EBA46877A46F661A /* ZLImageEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLImageEditor-umbrella.h"; sourceTree = "<group>"; };
+		A246D2324876A10B4A11EB2BCF0B31DB /* UIColor+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ZLImageEditor.swift"; path = "Sources/Extensions/UIColor+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		A2A5301E2AFBE9B0AF7C70D7C93356AD /* ZLAdjustSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLAdjustSlider.swift; path = Sources/General/ZLAdjustSlider.swift; sourceTree = "<group>"; };
+		A4FD10EA0761B9CAC146DD9E441D0C7B /* ZLBaseStickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLBaseStickerView.swift; path = Sources/General/ZLBaseStickerView.swift; sourceTree = "<group>"; };
+		A55A34AE4DE33DC2259138E9550C7627 /* ZLFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLFilter.swift; path = Sources/General/ZLFilter.swift; sourceTree = "<group>"; };
+		A64AF08948B2189B97C291CD914266DE /* ZLClipImageDismissAnimatedTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLClipImageDismissAnimatedTransition.swift; path = Sources/General/ZLClipImageDismissAnimatedTransition.swift; sourceTree = "<group>"; };
+		A6F6AD82E35A7337C3449A16E04F94E9 /* Pods-ImageEditorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditorTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AEC712246F9D6EDDC7056597F2F59166 /* ZLImageEditorDefine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageEditorDefine.swift; path = Sources/General/ZLImageEditorDefine.swift; sourceTree = "<group>"; };
+		B0CD32DC6AC67C6AF4A9761348E2369E /* Cell+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Cell+ZLImageEditor.swift"; path = "Sources/Extensions/Cell+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		B5D9FD81B977B7E5F5E3C0C8112F772B /* Pods-ImageEditorTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditorTests-Info.plist"; sourceTree = "<group>"; };
+		B75D60D8F0F50B2E21386B42F3F94501 /* Pods-ImageEditor-ImageEditorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageEditor-ImageEditorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA92E209B9E680625B16F937A4774C0E /* ZLImageEditor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLImageEditor-prefix.pch"; sourceTree = "<group>"; };
+		BAFF6BA002FDD7C503E808C7E3F46EF4 /* ZLEditImageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditImageViewController.swift; path = Sources/General/ZLEditImageViewController.swift; sourceTree = "<group>"; };
+		BE3115F7DBC38B5B9F2035A9EF4BA92C /* UIImage+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ZLImageEditor.swift"; path = "Sources/Extensions/UIImage+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		C3EF521F083845D12F9D546662698E74 /* ZLImageEditorConfiguration+Chaining.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ZLImageEditorConfiguration+Chaining.swift"; path = "Sources/General/ZLImageEditorConfiguration+Chaining.swift"; sourceTree = "<group>"; };
+		D48D6031A2CC91968E870B8DB8BCE0B5 /* ZLImageEditor.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ZLImageEditor.bundle; path = Sources/ZLImageEditor.bundle; sourceTree = "<group>"; };
+		D681A02CDDAE56BB6528E986DCB74886 /* ZLImageStickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageStickerView.swift; path = Sources/General/ZLImageStickerView.swift; sourceTree = "<group>"; };
+		D77C665145875779C6C2788E1D25AFAE /* Pods-ImageEditor-ImageEditorUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ImageEditor-ImageEditorUITests"; path = Pods_ImageEditor_ImageEditorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA758186EB3562E6F20560C487676F6 /* Pods-ImageEditor-ImageEditorUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImageEditor-ImageEditorUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E115819882CDDDBCF7BA5EDA17C65DAE /* Pods-ImageEditorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageEditorTests.release.xcconfig"; sourceTree = "<group>"; };
+		E301BF54A06BAC1AB1926149A73CE413 /* ZLImageEditorUIConfiguration+Chaining.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ZLImageEditorUIConfiguration+Chaining.swift"; path = "Sources/General/ZLImageEditorUIConfiguration+Chaining.swift"; sourceTree = "<group>"; };
+		E69452934E078D04CE8D9E2EE4FE073C /* Pods-ImageEditorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImageEditorTests-umbrella.h"; sourceTree = "<group>"; };
+		E6D372E8209E941C79866E816FBCAFFC /* UIView+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+ZLImageEditor.swift"; path = "Sources/Extensions/UIView+ZLImageEditor.swift"; sourceTree = "<group>"; };
+		E726F983A8756B44377DD72DE45EEA64 /* ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageEditor.swift; path = Sources/General/ZLImageEditor.swift; sourceTree = "<group>"; };
+		E97B9ACF7547978B06148D0D4ACBB735 /* Pods-ImageEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImageEditor-umbrella.h"; sourceTree = "<group>"; };
+		EBD7CA582E5F6C0277DDDB21121D96D4 /* Pods-ImageEditorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImageEditorTests-dummy.m"; sourceTree = "<group>"; };
+		F1046AAEBA7A601D2684945C967D59E0 /* ZLImageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLImageEditor.release.xcconfig; sourceTree = "<group>"; };
+		F3CF167A6AA0439F52F6E1D8CBCB2CB1 /* Pods-ImageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageEditor.release.xcconfig"; sourceTree = "<group>"; };
+		F625C0B9034F18C695ED2BD8155DF59A /* Pods-ImageEditor-ImageEditorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImageEditor-ImageEditorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F9E8CFD69498716D2271001255D0D17D /* Pods-ImageEditor-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImageEditor-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0503A81A5327E10EF6F10727E69A40C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1165ED1996A7A7097C0042B6051C2F90 /* Accelerate.framework in Frameworks */,
+				BA80C85E6449E9BD30D6A490F20C3685 /* Foundation.framework in Frameworks */,
+				6FEB560B40E0912F7C195B8AC246FA45 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B20469F61FBCD39B1A27FE855DD55E98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25F48342759E4903DA902235E84FAD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF2AE01A856C7AC9DA8710F1E2FCDAE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8E81F46D896A5603F3DAA9B49BE5B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0936680D3B43A54DE700F148C5A9BD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1E234F34357C79363BB252A8CD9972 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C49DCB435CE913A16B5CCE625F27BE6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05A668B852A11C37CEEB26A6C7362290 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AA81DAFEE6465B16B227757F03F7CE6 /* ZLImageEditor */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		27E3474711632A2F87DBEBA82FD16CED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D48D6031A2CC91968E870B8DB8BCE0B5 /* ZLImageEditor.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3570B3F67F3AA48E4AFBD2B2C3407CC5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AF7D5CE650344019FD47D8DB4329E2F /* ZLImageEditor.modulemap */,
+				6A0EC294B78154D89A1D3CD5F383120A /* ZLImageEditor-dummy.m */,
+				1563576725DBE0D0E76D579711BD7FF2 /* ZLImageEditor-Info.plist */,
+				BA92E209B9E680625B16F937A4774C0E /* ZLImageEditor-prefix.pch */,
+				A17A5D11391F3BC7EBA46877A46F661A /* ZLImageEditor-umbrella.h */,
+				9C223BD18DC6A201C408E0B5B6876806 /* ZLImageEditor.debug.xcconfig */,
+				F1046AAEBA7A601D2684945C967D59E0 /* ZLImageEditor.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZLImageEditor";
+			sourceTree = "<group>";
+		};
+		5C49DCB435CE913A16B5CCE625F27BE6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				14BDA8230569BF877C4DA19761A70ED7 /* Accelerate.framework */,
+				3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */,
+				2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6AA81DAFEE6465B16B227757F03F7CE6 /* ZLImageEditor */ = {
+			isa = PBXGroup;
+			children = (
+				7292B42C1091682FE94CBFDBED55CEED /* Core */,
+				27E3474711632A2F87DBEBA82FD16CED /* Resources */,
+				3570B3F67F3AA48E4AFBD2B2C3407CC5 /* Support Files */,
+			);
+			name = ZLImageEditor;
+			path = ZLImageEditor;
+			sourceTree = "<group>";
+		};
+		7292B42C1091682FE94CBFDBED55CEED /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1032D290CF4A04E2C51EDF9C77BAC8CA /* Bundle+ZLImageEditor.swift */,
+				B0CD32DC6AC67C6AF4A9761348E2369E /* Cell+ZLImageEditor.swift */,
+				78855AC5506A3115A0ED4FD20A337398 /* CGFloat+ZLImageEditor.swift */,
+				3BEF46C173243C7DDA9268B1B4190D33 /* String+ZLImageEditor.swift */,
+				A246D2324876A10B4A11EB2BCF0B31DB /* UIColor+ZLImageEditor.swift */,
+				BE3115F7DBC38B5B9F2035A9EF4BA92C /* UIImage+ZLImageEditor.swift */,
+				E6D372E8209E941C79866E816FBCAFFC /* UIView+ZLImageEditor.swift */,
+				A2A5301E2AFBE9B0AF7C70D7C93356AD /* ZLAdjustSlider.swift */,
+				A4FD10EA0761B9CAC146DD9E441D0C7B /* ZLBaseStickerView.swift */,
+				A64AF08948B2189B97C291CD914266DE /* ZLClipImageDismissAnimatedTransition.swift */,
+				9509FC93A2E3005771C5118FEFAB4658 /* ZLClipImageViewController.swift */,
+				BAFF6BA002FDD7C503E808C7E3F46EF4 /* ZLEditImageViewController.swift */,
+				A0AA914ADAFE7BA717AEB87C05353E17 /* ZLEditToolCells.swift */,
+				2C123D08A887D6643C53ED2E708CF6DB /* ZLEnlargeButton.swift */,
+				A55A34AE4DE33DC2259138E9550C7627 /* ZLFilter.swift */,
+				06B73DFB6EC23402E4EA55485525A415 /* ZLImageEditor.h */,
+				E726F983A8756B44377DD72DE45EEA64 /* ZLImageEditor.swift */,
+				9EA53C6DB9E1B91763487F0BC212A980 /* ZLImageEditorConfiguration.swift */,
+				C3EF521F083845D12F9D546662698E74 /* ZLImageEditorConfiguration+Chaining.swift */,
+				AEC712246F9D6EDDC7056597F2F59166 /* ZLImageEditorDefine.swift */,
+				760026D6BF2FA3E118C2605776479DC8 /* ZLImageEditorLanguageDefine.swift */,
+				180B160B7C13522816DC25317D79CD4D /* ZLImageEditorUIConfiguration.swift */,
+				E301BF54A06BAC1AB1926149A73CE413 /* ZLImageEditorUIConfiguration+Chaining.swift */,
+				D681A02CDDAE56BB6528E986DCB74886 /* ZLImageStickerView.swift */,
+				2BF441958EF55AE4D51D7A1738A88E60 /* ZLInputTextViewController.swift */,
+				153F83CC28BB0720F6DC35CFBA5E8797 /* ZLProgressHUD.swift */,
+				36BA7FDEA28E4CF3909C1BF74E4DC579 /* ZLTextStickerView.swift */,
+				4ABB6C0E418E963CC106C05CE21463A7 /* ZLWeakProxy.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		8122AE817FA615795CB0DFCFDDF2ED24 /* Pods-ImageEditor */ = {
+			isa = PBXGroup;
+			children = (
+				164A5DFEE94420018E000B57194EB55B /* Pods-ImageEditor.modulemap */,
+				F9E8CFD69498716D2271001255D0D17D /* Pods-ImageEditor-acknowledgements.markdown */,
+				455941A3F64F478ABCC0825BD456A635 /* Pods-ImageEditor-acknowledgements.plist */,
+				68E8813C754D41DDBC3CA117E5FC7F25 /* Pods-ImageEditor-dummy.m */,
+				7087C827E0934FA86F73BDDF212F1C47 /* Pods-ImageEditor-frameworks.sh */,
+				8544FC26F3D077B545F8F539B60A1DAD /* Pods-ImageEditor-Info.plist */,
+				E97B9ACF7547978B06148D0D4ACBB735 /* Pods-ImageEditor-umbrella.h */,
+				6DB21DFDB6C1775F058CA56AE426A940 /* Pods-ImageEditor.debug.xcconfig */,
+				F3CF167A6AA0439F52F6E1D8CBCB2CB1 /* Pods-ImageEditor.release.xcconfig */,
+			);
+			name = "Pods-ImageEditor";
+			path = "Target Support Files/Pods-ImageEditor";
+			sourceTree = "<group>";
+		};
+		875437B962F93E2AC51E425E7E967426 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8122AE817FA615795CB0DFCFDDF2ED24 /* Pods-ImageEditor */,
+				9F8538CA902E058EB89EB6047796FD83 /* Pods-ImageEditor-ImageEditorUITests */,
+				9B13EADE35658D73D32E3B61C7D3BE45 /* Pods-ImageEditorTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9B13EADE35658D73D32E3B61C7D3BE45 /* Pods-ImageEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				07350652A1F110C97E1376BF63A48444 /* Pods-ImageEditorTests.modulemap */,
+				9044D69F6A250C175BAF116A989A02A4 /* Pods-ImageEditorTests-acknowledgements.markdown */,
+				A6F6AD82E35A7337C3449A16E04F94E9 /* Pods-ImageEditorTests-acknowledgements.plist */,
+				EBD7CA582E5F6C0277DDDB21121D96D4 /* Pods-ImageEditorTests-dummy.m */,
+				B5D9FD81B977B7E5F5E3C0C8112F772B /* Pods-ImageEditorTests-Info.plist */,
+				E69452934E078D04CE8D9E2EE4FE073C /* Pods-ImageEditorTests-umbrella.h */,
+				93C70AEEEB30A0818D94BD6A4E4B1760 /* Pods-ImageEditorTests.debug.xcconfig */,
+				E115819882CDDDBCF7BA5EDA17C65DAE /* Pods-ImageEditorTests.release.xcconfig */,
+			);
+			name = "Pods-ImageEditorTests";
+			path = "Target Support Files/Pods-ImageEditorTests";
+			sourceTree = "<group>";
+		};
+		9F8538CA902E058EB89EB6047796FD83 /* Pods-ImageEditor-ImageEditorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1742A77CBD94DB52196819DB387A630F /* Pods-ImageEditor-ImageEditorUITests.modulemap */,
+				4B558346328C72B2E466BD8306DBA906 /* Pods-ImageEditor-ImageEditorUITests-acknowledgements.markdown */,
+				2135CF06F772BBA7EAA0A46B29B6D0C5 /* Pods-ImageEditor-ImageEditorUITests-acknowledgements.plist */,
+				9C302CE3AFB14D486F974FA9494BED53 /* Pods-ImageEditor-ImageEditorUITests-dummy.m */,
+				DAA758186EB3562E6F20560C487676F6 /* Pods-ImageEditor-ImageEditorUITests-frameworks.sh */,
+				61A9C64545A4D5F5C44B99CAF9D12815 /* Pods-ImageEditor-ImageEditorUITests-Info.plist */,
+				2EBC6FF5F002DA436D33D39456767D34 /* Pods-ImageEditor-ImageEditorUITests-umbrella.h */,
+				B75D60D8F0F50B2E21386B42F3F94501 /* Pods-ImageEditor-ImageEditorUITests.debug.xcconfig */,
+				F625C0B9034F18C695ED2BD8155DF59A /* Pods-ImageEditor-ImageEditorUITests.release.xcconfig */,
+			);
+			name = "Pods-ImageEditor-ImageEditorUITests";
+			path = "Target Support Files/Pods-ImageEditor-ImageEditorUITests";
+			sourceTree = "<group>";
+		};
+		CBB87A6BA02CB5EE19E774962FBF7E94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B46532E1703A6F94B07131392038592 /* Pods-ImageEditor */,
+				D77C665145875779C6C2788E1D25AFAE /* Pods-ImageEditor-ImageEditorUITests */,
+				9B45C38A0B3EABA34D5F2DE23C1FC5EB /* Pods-ImageEditorTests */,
+				3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				05A668B852A11C37CEEB26A6C7362290 /* Pods */,
+				CBB87A6BA02CB5EE19E774962FBF7E94 /* Products */,
+				875437B962F93E2AC51E425E7E967426 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		25ECCABAF0882A77730699F61630FA4C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF74201091AE781A1434EEE26285F6C9 /* Pods-ImageEditor-ImageEditorUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		463E0A20BB7DCDF9AACB1815BAB41D44 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6217C4128403DC6C0E710964309193 /* Pods-ImageEditor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71EEDEE5A6BC9D700BB392B328A2A891 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50EE3D47CFFEFB4FE8FA0C392039730 /* Pods-ImageEditorTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E291503E0E29ADB6FC24034C265444C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA640B4C13BBF0E08062B39AF351C11 /* ZLImageEditor.h in Headers */,
+				48960C9E3576134D137117E6CAC12871 /* ZLImageEditor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		547C37DD139D8676EDF523E6EDA48A96 /* Pods-ImageEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACEEFD0EF4792B19FBD0EBA1C0CA57D5 /* Build configuration list for PBXNativeTarget "Pods-ImageEditor" */;
+			buildPhases = (
+				463E0A20BB7DCDF9AACB1815BAB41D44 /* Headers */,
+				75464BCBDFCA550BE0C20049E5FCBE50 /* Sources */,
+				B20469F61FBCD39B1A27FE855DD55E98 /* Frameworks */,
+				56A61EC531D34BB1A97BDB81366C1C76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDC470598E4B3C987B0100F46B4D7E07 /* PBXTargetDependency */,
+			);
+			name = "Pods-ImageEditor";
+			productName = Pods_ImageEditor;
+			productReference = 7B46532E1703A6F94B07131392038592 /* Pods-ImageEditor */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D2FA43D2C8B012E70086FECDDEB0F31 /* ZLImageEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654F622FE626A3D75D3EF49D0180C419 /* Build configuration list for PBXNativeTarget "ZLImageEditor" */;
+			buildPhases = (
+				E291503E0E29ADB6FC24034C265444C2 /* Headers */,
+				E9E6B69A86D9EC12593669E3A7771C4A /* Sources */,
+				0503A81A5327E10EF6F10727E69A40C0 /* Frameworks */,
+				748E8BD9BB3AE6F7A8F07DFBC8581693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZLImageEditor;
+			productName = ZLImageEditor;
+			productReference = 3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC8326B984D6A6B05E1E200003A3130D /* Pods-ImageEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9465D7FC9998B892A2A6D4DCBFB729B5 /* Build configuration list for PBXNativeTarget "Pods-ImageEditorTests" */;
+			buildPhases = (
+				71EEDEE5A6BC9D700BB392B328A2A891 /* Headers */,
+				8FBA34AD832BB5BEBE6A3B345E381347 /* Sources */,
+				D0936680D3B43A54DE700F148C5A9BD8 /* Frameworks */,
+				F1D3DFFFF8128323B9F3090A9498F47C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A5EDADEF6F882839FB2E1DA6AB870AA /* PBXTargetDependency */,
+			);
+			name = "Pods-ImageEditorTests";
+			productName = Pods_ImageEditorTests;
+			productReference = 9B45C38A0B3EABA34D5F2DE23C1FC5EB /* Pods-ImageEditorTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		E18EBC7E8E7A0D4FFA47E13D9E44CDCF /* Pods-ImageEditor-ImageEditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC6190333F1763D2A5C32D3EE7D80844 /* Build configuration list for PBXNativeTarget "Pods-ImageEditor-ImageEditorUITests" */;
+			buildPhases = (
+				25ECCABAF0882A77730699F61630FA4C /* Headers */,
+				5C34BD82932AE9B32D369FD974622A57 /* Sources */,
+				CF2AE01A856C7AC9DA8710F1E2FCDAE0 /* Frameworks */,
+				1D60BB64BB9F75A5B6FD4000CE8AE44B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77D9B73056FD1162EF28985D49ED178C /* PBXTargetDependency */,
+			);
+			name = "Pods-ImageEditor-ImageEditorUITests";
+			productName = Pods_ImageEditor_ImageEditorUITests;
+			productReference = D77C665145875779C6C2788E1D25AFAE /* Pods-ImageEditor-ImageEditorUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CBB87A6BA02CB5EE19E774962FBF7E94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				547C37DD139D8676EDF523E6EDA48A96 /* Pods-ImageEditor */,
+				E18EBC7E8E7A0D4FFA47E13D9E44CDCF /* Pods-ImageEditor-ImageEditorUITests */,
+				DC8326B984D6A6B05E1E200003A3130D /* Pods-ImageEditorTests */,
+				8D2FA43D2C8B012E70086FECDDEB0F31 /* ZLImageEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60BB64BB9F75A5B6FD4000CE8AE44B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A61EC531D34BB1A97BDB81366C1C76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748E8BD9BB3AE6F7A8F07DFBC8581693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7B4E5B8659DB3D6E9349D3A4BD3915 /* ZLImageEditor.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D3DFFFF8128323B9F3090A9498F47C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C34BD82932AE9B32D369FD974622A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2535E481B22831F94742181CEB562577 /* Pods-ImageEditor-ImageEditorUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75464BCBDFCA550BE0C20049E5FCBE50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F474ED21621B2F476645FE4E774C214 /* Pods-ImageEditor-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBA34AD832BB5BEBE6A3B345E381347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7234A3D026F427C7F24BBA99C608FB1E /* Pods-ImageEditorTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9E6B69A86D9EC12593669E3A7771C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE419F578F715F501AB2BAEEEF27B6D /* Bundle+ZLImageEditor.swift in Sources */,
+				2A44043C33F9551A5BB5B1859C956145 /* Cell+ZLImageEditor.swift in Sources */,
+				CF5A79F9531C42F3CCC29CB758DF9C58 /* CGFloat+ZLImageEditor.swift in Sources */,
+				7B9BACCFD733188B40B87926726F3A6E /* String+ZLImageEditor.swift in Sources */,
+				117844CCDD2AA79368ACFE46BABD825E /* UIColor+ZLImageEditor.swift in Sources */,
+				823C2711EC2A7BE2C057FC37A567BCAF /* UIImage+ZLImageEditor.swift in Sources */,
+				B468AF4D7C4B037714486915755FBE03 /* UIView+ZLImageEditor.swift in Sources */,
+				8904258F0110063B230704D50800A448 /* ZLAdjustSlider.swift in Sources */,
+				CC23CE9FA917FE307D0BC44E813C8465 /* ZLBaseStickerView.swift in Sources */,
+				6F81CD384DE4EB229E7DC84E5BC66456 /* ZLClipImageDismissAnimatedTransition.swift in Sources */,
+				2AAE204D8024D4F0E43B5B98A56EEB75 /* ZLClipImageViewController.swift in Sources */,
+				C18CC09AECE9509245CC233562DCE135 /* ZLEditImageViewController.swift in Sources */,
+				DC992E2FA164DF28EF807E443BA732A5 /* ZLEditToolCells.swift in Sources */,
+				A17FE6A29FE2AD312A96B9E2C57FDF4E /* ZLEnlargeButton.swift in Sources */,
+				55F40007C4E9CF2A803B86E06DD1A772 /* ZLFilter.swift in Sources */,
+				88E9C6AC71E3390A0F08EAC0751C1FF5 /* ZLImageEditor.swift in Sources */,
+				F31FDB3E3FE6CE9D375C9D8F066F0C5C /* ZLImageEditor-dummy.m in Sources */,
+				9F6BE430F875A5576049AECD4498F011 /* ZLImageEditorConfiguration.swift in Sources */,
+				4A89BFAA8FA313887013A2AD92F75109 /* ZLImageEditorConfiguration+Chaining.swift in Sources */,
+				AF1556BE75FC0E603E7272FEC54D91F2 /* ZLImageEditorDefine.swift in Sources */,
+				EF1F5EFD72711B85E157177856CA7CB7 /* ZLImageEditorLanguageDefine.swift in Sources */,
+				729B5CACC2095D5A5557172EE53D54B3 /* ZLImageEditorUIConfiguration.swift in Sources */,
+				6904AFDA181519FB5C37442069B48CB3 /* ZLImageEditorUIConfiguration+Chaining.swift in Sources */,
+				82C4DF36F5047182096BDB3D1936E9F3 /* ZLImageStickerView.swift in Sources */,
+				2EDACC0D2443C9D72257D3FEAE1C876C /* ZLInputTextViewController.swift in Sources */,
+				28F7023D26FCFB5F69E4E7EC2290294D /* ZLProgressHUD.swift in Sources */,
+				B4EF40D0085D6CA39502C4C41D3F4A09 /* ZLTextStickerView.swift in Sources */,
+				2AE9BB5DAF8D9956FF5CBD5FF1364AFC /* ZLWeakProxy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77D9B73056FD1162EF28985D49ED178C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZLImageEditor;
+			target = 8D2FA43D2C8B012E70086FECDDEB0F31 /* ZLImageEditor */;
+			targetProxy = 4BD3334333D8A69F16AB3E0DA0CB6F37 /* PBXContainerItemProxy */;
+		};
+		8A5EDADEF6F882839FB2E1DA6AB870AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ImageEditor";
+			target = 547C37DD139D8676EDF523E6EDA48A96 /* Pods-ImageEditor */;
+			targetProxy = 852926F4FEA088E458B8851A5D54ED28 /* PBXContainerItemProxy */;
+		};
+		CDC470598E4B3C987B0100F46B4D7E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZLImageEditor;
+			target = 8D2FA43D2C8B012E70086FECDDEB0F31 /* ZLImageEditor */;
+			targetProxy = 7B3B3354D1187BF92E8E3E713C39BC0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		007264B0F19275EBCA887C388FC99397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C70AEEEB30A0818D94BD6A4E4B1760 /* Pods-ImageEditorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ImageEditorTests/Pods-ImageEditorTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImageEditorTests/Pods-ImageEditorTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0BA861BFB616D9439B49FD66C66C28EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB21DFDB6C1775F058CA56AE426A940 /* Pods-ImageEditor.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ImageEditor/Pods-ImageEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImageEditor/Pods-ImageEditor.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3750B0D0603E88EA1C707E1E108A987E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3CF167A6AA0439F52F6E1D8CBCB2CB1 /* Pods-ImageEditor.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ImageEditor/Pods-ImageEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImageEditor/Pods-ImageEditor.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4DAF0DE927E0410A03058AB7ADE40D7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C223BD18DC6A201C408E0B5B6876806 /* ZLImageEditor.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZLImageEditor/ZLImageEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLImageEditor/ZLImageEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZLImageEditor/ZLImageEditor.modulemap";
+				PRODUCT_MODULE_NAME = ZLImageEditor;
+				PRODUCT_NAME = ZLImageEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5EBE37684E851AED534D107DBB0CBA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F625C0B9034F18C695ED2BD8155DF59A /* Pods-ImageEditor-ImageEditorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ImageEditor-ImageEditorUITests/Pods-ImageEditor-ImageEditorUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImageEditor-ImageEditorUITests/Pods-ImageEditor-ImageEditorUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		845B9B93B216B851834E14AC97396C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1046AAEBA7A601D2684945C967D59E0 /* ZLImageEditor.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZLImageEditor/ZLImageEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLImageEditor/ZLImageEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZLImageEditor/ZLImageEditor.modulemap";
+				PRODUCT_MODULE_NAME = ZLImageEditor;
+				PRODUCT_NAME = ZLImageEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B74BD6FCF26A43A7696D35C31E3716DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E115819882CDDDBCF7BA5EDA17C65DAE /* Pods-ImageEditorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ImageEditorTests/Pods-ImageEditorTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImageEditorTests/Pods-ImageEditorTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCDE71E8E9DC92DC60B4B70D97B9BE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B75D60D8F0F50B2E21386B42F3F94501 /* Pods-ImageEditor-ImageEditorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ImageEditor-ImageEditorUITests/Pods-ImageEditor-ImageEditorUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImageEditor-ImageEditorUITests/Pods-ImageEditor-ImageEditorUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654F622FE626A3D75D3EF49D0180C419 /* Build configuration list for PBXNativeTarget "ZLImageEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DAF0DE927E0410A03058AB7ADE40D7F /* Debug */,
+				845B9B93B216B851834E14AC97396C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9465D7FC9998B892A2A6D4DCBFB729B5 /* Build configuration list for PBXNativeTarget "Pods-ImageEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				007264B0F19275EBCA887C388FC99397 /* Debug */,
+				B74BD6FCF26A43A7696D35C31E3716DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACEEFD0EF4792B19FBD0EBA1C0CA57D5 /* Build configuration list for PBXNativeTarget "Pods-ImageEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA861BFB616D9439B49FD66C66C28EA /* Debug */,
+				3750B0D0603E88EA1C707E1E108A987E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC6190333F1763D2A5C32D3EE7D80844 /* Build configuration list for PBXNativeTarget "Pods-ImageEditor-ImageEditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDE71E8E9DC92DC60B4B70D97B9BE47 /* Debug */,
+				5EBE37684E851AED534D107DBB0CBA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

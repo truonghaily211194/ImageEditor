@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ZLImageEditor
 
 class EditorImageViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var alphaLabel: UILabel!
     @IBOutlet weak var alphaSlider: UISlider!
+    
+    var resultImageEditModel: ZLEditImageModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,12 @@ class EditorImageViewController: UIViewController {
 
         mainImageView.image = image1
         newImageView.image = image2
+        
+        ZLImageEditorConfiguration.default()
+            .fontChooserContainerView(FontChooserContainerView())
+            .editImageTools([.draw, .clip, .imageSticker, .textSticker, .mosaic, .filter, .adjust])
+            .adjustTools([.brightness, .contrast, .saturation])
+            .canRedo(true)
     }
 
     @IBAction func changeValueAlpha(_ sender: UISlider) {
@@ -31,10 +40,19 @@ class EditorImageViewController: UIViewController {
 
     @IBAction func addImage(_ sender: Any) {
         combineImage()
+        editImage(previewImageView.image!, editModel: resultImageEditModel)
     }
 
     @IBAction func saveImageToAlbum(_ sender: Any) {
         alertAction()
+    }
+    
+    func editImage(_ image: UIImage, editModel: ZLEditImageModel?) {
+    
+        ZLEditImageViewController.showEditImageVC(parentVC: self, image: image, editModel: editModel) { [weak self] resImage, editModel in
+            self?.previewImageView.image = resImage
+            self?.resultImageEditModel = editModel
+        }
     }
 
     func alertAction() {
@@ -61,6 +79,7 @@ class EditorImageViewController: UIViewController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = sourceType
+//        showDetailViewController(imagePickerController, sender: nil)
         present(imagePickerController, animated: true, completion: nil)
     }
 
@@ -71,65 +90,6 @@ class EditorImageViewController: UIViewController {
         previewImageView.image = combinedImage
         mainImageView.image = combinedImage
     }
-
-//    func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
-//        guard let image = image1, let overlayImage = image2 else { return nil }
-//
-//        let canvasSize = CGSize(width: image.size.width, height: image.size.height)
-//        UIGraphicsBeginImageContextWithOptions(canvasSize, false, 0.0)
-//
-//        image.draw(in: CGRect(origin: .zero, size: canvasSize))
-//        overlayImage.draw(in: CGRect(origin: .zero, size: canvasSize), blendMode: .normal, alpha: newImageView.alpha)
-//
-//        let combinedImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        return combinedImage
-//    }
-    
-//    func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
-//        guard let image1 = image1, let image2 = image2 else { return nil }
-//        let newSize = image1.size // Kích thước mới là kích thước của hình ảnh thứ nhất
-//
-//        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-//
-//        // Vẽ hình ảnh thứ nhất
-//        image1.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
-//
-//        // Tính toán kích thước và vị trí của hình ảnh thứ hai
-//        let imageSize = calculateScaledSize(for: image2, fittingSize: newSize)
-//        let imageOrigin = CGPoint(x: (newSize.width - imageSize.width) / 2, y: (newSize.height - imageSize.height) / 2)
-//        let imageRect = CGRect(origin: imageOrigin, size: imageSize)
-//
-//        // Vẽ hình ảnh thứ hai
-//        image2.draw(in: imageRect, blendMode: .normal, alpha: newImageView.alpha)
-//
-//        let combinedImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        return combinedImage
-//    }
-    
-//    func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
-//        guard let image1 = image1, let image2 = image2 else { return nil }
-//        let newSize = image1.size // Kích thước mới là kích thước của hình ảnh thứ nhất
-//
-//        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-//
-//        // Vẽ hình ảnh thứ nhất
-//        image1.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
-//
-//        // Tính toán kích thước mới và vị trí của hình ảnh thứ hai
-//        let imageRect = CGRect(origin: .zero, size: newSize)
-//
-//        // Vẽ hình ảnh thứ hai với content mode là aspectFill
-//        image2.draw(in: imageRect, blendMode: .normal, alpha: newImageView.alpha)
-//
-//        let combinedImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        return combinedImage
-//    }
     
     func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
         guard let image1 = image1, let image2 = image2 else { return nil }
@@ -165,20 +125,6 @@ class EditorImageViewController: UIViewController {
         
         return combinedImage
     }
-    
-    func calculateScaledSize(for image: UIImage, fittingSize: CGSize) -> CGSize {
-        let aspectRatio = image.size.width / image.size.height
-        var scaledSize = fittingSize
-        
-        if aspectRatio > 1 {
-            scaledSize.height = fittingSize.width / aspectRatio
-        } else {
-            scaledSize.width = fittingSize.height * aspectRatio
-        }
-        
-        return scaledSize
-    }
-
 }
 
 extension EditorImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
