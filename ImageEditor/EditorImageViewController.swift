@@ -17,7 +17,8 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var alphaSlider: UISlider!
     @IBOutlet weak var nameImageLabel: UILabel!
     @IBOutlet weak var switchControl: UISwitch!
-
+    @IBOutlet weak var imageAddButton: UIButton!
+    
     var resultImageEditModel: ZLEditImageModel?
     var isImageAbove = false
     var alphaImageBelow: Float = 1.00
@@ -149,6 +150,11 @@ class EditorImageViewController: UIViewController {
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.popoverPresentationController?.sourceView = imageAddButton
+        alertController.popoverPresentationController?.sourceRect = imageAddButton.bounds
+
+        // Hiển thị UIAlertController
 
         alertController.addAction(cameraAction)
         alertController.addAction(libraryAction)

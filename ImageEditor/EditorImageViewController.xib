@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="alphaLabel" destination="SN1-nP-j5h" id="ViA-Ue-XcM"/>
                 <outlet property="alphaSlider" destination="6Yz-tH-wJG" id="aaB-e7-Sgj"/>
+                <outlet property="imageAddButton" destination="dY1-gZ-kkO" id="7NK-DU-Hxj"/>
                 <outlet property="mainImageView" destination="yun-gr-su2" id="8ls-Xc-tDH"/>
                 <outlet property="nameImageLabel" destination="F1w-ch-SJM" id="iT4-Z0-67D"/>
                 <outlet property="newImageView" destination="c5g-7F-NIO" id="xMZ-3T-oJ1"/>
