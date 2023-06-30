@@ -32,7 +32,7 @@ class EditorImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Image Editor"
+        title = "Combine Images"
         // Đặt màu cho tiêu đề của thanh điều hướng
         let titleAttributes: [NSAttributedString.Key: Any] = [
                 .foregroundColor: UIColor.systemBlue, // Màu của tiêu đề
@@ -138,17 +138,17 @@ class EditorImageViewController: UIViewController {
     }
 
     func alertAction() {
-        let alertController = UIAlertController(title: "Chọn ảnh", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Add Photos", message: nil, preferredStyle: .actionSheet)
 
-        let cameraAction = UIAlertAction(title: "Chụp ảnh", style: .default) { (_) in
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (_) in
             self.choosePhoto(sourceType: .camera)
         }
 
-        let libraryAction = UIAlertAction(title: "Chọn từ thư viện ảnh", style: .default) { (_) in
+        let libraryAction = UIAlertAction(title: "Library", style: .default) { (_) in
             self.choosePhoto(sourceType: .photoLibrary)
         }
 
-        let cancelAction = UIAlertAction(title: "Huỷ", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         alertController.addAction(cameraAction)
         alertController.addAction(libraryAction)

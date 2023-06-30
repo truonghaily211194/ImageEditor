@@ -93,7 +93,7 @@
 		2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2EBC6FF5F002DA436D33D39456767D34 /* Pods-ImageEditor-ImageEditorUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImageEditor-ImageEditorUITests-umbrella.h"; sourceTree = "<group>"; };
 		36BA7FDEA28E4CF3909C1BF74E4DC579 /* ZLTextStickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLTextStickerView.swift; path = Sources/General/ZLTextStickerView.swift; sourceTree = "<group>"; };
-		3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLImageEditor; path = ZLImageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLImageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEF46C173243C7DDA9268B1B4190D33 /* String+ZLImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+ZLImageEditor.swift"; path = "Sources/Extensions/String+ZLImageEditor.swift"; sourceTree = "<group>"; };
 		3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		455941A3F64F478ABCC0825BD456A635 /* Pods-ImageEditor-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImageEditor-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		9B45C38A0B3EABA34D5F2DE23C1FC5EB /* Pods-ImageEditorTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ImageEditorTests"; path = Pods_ImageEditorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C223BD18DC6A201C408E0B5B6876806 /* ZLImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLImageEditor.debug.xcconfig; sourceTree = "<group>"; };
 		9C302CE3AFB14D486F974FA9494BED53 /* Pods-ImageEditor-ImageEditorUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImageEditor-ImageEditorUITests-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EA53C6DB9E1B91763487F0BC212A980 /* ZLImageEditorConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLImageEditorConfiguration.swift; path = Sources/General/ZLImageEditorConfiguration.swift; sourceTree = "<group>"; };
 		A0AA914ADAFE7BA717AEB87C05353E17 /* ZLEditToolCells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLEditToolCells.swift; path = Sources/General/ZLEditToolCells.swift; sourceTree = "<group>"; };
 		A17A5D11391F3BC7EBA46877A46F661A /* ZLImageEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLImageEditor-umbrella.h"; sourceTree = "<group>"; };
@@ -243,7 +243,6 @@
 				27E3474711632A2F87DBEBA82FD16CED /* Resources */,
 				3570B3F67F3AA48E4AFBD2B2C3407CC5 /* Support Files */,
 			);
-			name = ZLImageEditor;
 			path = ZLImageEditor;
 			sourceTree = "<group>";
 		};
@@ -348,7 +347,7 @@
 				7B46532E1703A6F94B07131392038592 /* Pods-ImageEditor */,
 				D77C665145875779C6C2788E1D25AFAE /* Pods-ImageEditor-ImageEditorUITests */,
 				9B45C38A0B3EABA34D5F2DE23C1FC5EB /* Pods-ImageEditorTests */,
-				3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor */,
+				3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -437,7 +436,7 @@
 			);
 			name = ZLImageEditor;
 			productName = ZLImageEditor;
-			productReference = 3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor */;
+			productReference = 3892FA5D0C8FB0386B93487AD666B63C /* ZLImageEditor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DC8326B984D6A6B05E1E200003A3130D /* Pods-ImageEditorTests */ = {
@@ -751,7 +750,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ZLImageEditor/ZLImageEditor-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ZLImageEditor/ZLImageEditor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +822,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ZLImageEditor/ZLImageEditor-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ZLImageEditor/ZLImageEditor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
