@@ -87,12 +87,26 @@
                         <action selector="saveImageToAlbum:" destination="-1" eventType="touchUpInside" id="Kyv-6u-X8W"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oq-aH-clR">
+                    <rect key="frame" x="30" y="536.33333333333337" width="150" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="qE6-Ho-9Pr"/>
+                        <constraint firstAttribute="width" constant="150" id="u5P-2h-wig"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Preview Image" backgroundImage="background_bt"/>
+                    <connections>
+                        <action selector="preview:" destination="-1" eventType="touchUpInside" id="TlJ-9Y-NK9"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="UWc-Jx-xFz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Oh-TJ-Y52"/>
                 <constraint firstItem="SN1-nP-j5h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="3fF-BW-lqj"/>
+                <constraint firstItem="2oq-aH-clR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="CT8-zi-LiW"/>
                 <constraint firstItem="dY1-gZ-kkO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ESh-xo-FsF"/>
                 <constraint firstItem="UWc-Jx-xFz" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/2.5" id="FWA-Kg-Qsj"/>
                 <constraint firstItem="6Yz-tH-wJG" firstAttribute="leading" secondItem="SN1-nP-j5h" secondAttribute="trailing" constant="20" id="JHq-yC-wlI"/>
@@ -108,6 +122,7 @@
                 <constraint firstItem="SN1-nP-j5h" firstAttribute="top" secondItem="UWc-Jx-xFz" secondAttribute="bottom" constant="30" id="o7d-rr-Nz2"/>
                 <constraint firstItem="UWc-Jx-xFz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tzM-0f-50y"/>
                 <constraint firstItem="DCf-wM-szX" firstAttribute="centerX" secondItem="c5g-7F-NIO" secondAttribute="centerX" id="uxX-m6-UbG"/>
+                <constraint firstItem="2oq-aH-clR" firstAttribute="top" secondItem="dY1-gZ-kkO" secondAttribute="bottom" constant="6" id="zRI-2o-hHx"/>
             </constraints>
             <point key="canvasLocation" x="102" y="20"/>
         </view>

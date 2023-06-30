@@ -15,23 +15,46 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var alphaLabel: UILabel!
     @IBOutlet weak var alphaSlider: UISlider!
-    
+
     var resultImageEditModel: ZLEditImageModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Image Editor"
+        // Đặt màu cho tiêu đề của thanh điều hướng
+        let titleAttributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.systemBlue, // Màu của tiêu đề
+            .font: UIFont.boldSystemFont(ofSize: 18) // Font chữ của tiêu đề
+        ]
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+    
+//        if #available(iOS 15.0, *) {
+//            let appearance = UINavigationBarAppearance()
+//            appearance.configureWithDefaultBackground()
+//            appearance.shadowColor = .clear
+//            appearance.backgroundColor = UIColor.init(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
+//            navigationController?.navigationBar.standardAppearance = appearance
+//            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+//        } else {
+//            navigationController?.navigationBar.barTintColor = UIColor.init(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
+//        }
 
         let image1 = UIImage(named: "screen2.jpg")!
         let image2 = UIImage(named: "screen4.jpg")!
 
         mainImageView.image = image1
         newImageView.image = image2
-        
+
+        addTapGesturePreviewImage()
+        createBarButton()
+
         ZLImageEditorConfiguration.default()
             .fontChooserContainerView(FontChooserContainerView())
             .editImageTools([.draw, .clip, .imageSticker, .textSticker, .mosaic, .filter, .adjust])
             .adjustTools([.brightness, .contrast, .saturation])
             .canRedo(true)
+
     }
 
     @IBAction func changeValueAlpha(_ sender: UISlider) {
@@ -39,16 +62,35 @@ class EditorImageViewController: UIViewController {
     }
 
     @IBAction func addImage(_ sender: Any) {
+        alertAction()
+    }
+
+    @IBAction func preview(_ sender: Any) {
         combineImage()
-        editImage(previewImageView.image!, editModel: resultImageEditModel)
     }
 
     @IBAction func saveImageToAlbum(_ sender: Any) {
-        alertAction()
+        UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? UIImage(named: "screen2.jpg")!, self, #selector(saveDone), nil)
     }
-    
+
+    func addTapGesturePreviewImage() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        previewImageView.isUserInteractionEnabled = true
+        previewImageView.addGestureRecognizer(tapGesture)
+    }
+
+    func createBarButton() {
+        // Tạo nút rightBarButton với tiêu đề "Edit"
+        let rightBarButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
+        navigationItem.rightBarButtonItem = rightBarButton
+
+        // Tạo nút leftBarButton với biểu tượng "Reset"
+        let resetButton = UIBarButtonItem(image: UIImage(named: "reset_icon"), style: .plain, target: self, action: #selector(resetButtonTapped))
+        navigationItem.leftBarButtonItem = resetButton
+    }
+
     func editImage(_ image: UIImage, editModel: ZLEditImageModel?) {
-    
+
         ZLEditImageViewController.showEditImageVC(parentVC: self, image: image, editModel: editModel) { [weak self] resImage, editModel in
             self?.previewImageView.image = resImage
             self?.resultImageEditModel = editModel
@@ -90,21 +132,21 @@ class EditorImageViewController: UIViewController {
         previewImageView.image = combinedImage
         mainImageView.image = combinedImage
     }
-    
+
     func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
         guard let image1 = image1, let image2 = image2 else { return nil }
         let newSize = image1.size // Kích thước mới là kích thước của hình ảnh thứ nhất
-        
+
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-        
+
         // Vẽ hình ảnh thứ nhất
         image1.draw(in: CGRect(origin: CGPoint.zero, size: newSize))
-        
+
         // Tính toán kích thước mới và vị trí của hình ảnh thứ hai
         let aspectRatio1 = image1.size.width / image1.size.height
         let aspectRatio2 = image2.size.width / image2.size.height
         let targetRect: CGRect
-        
+
         if aspectRatio1 > aspectRatio2 {
             let targetWidth = newSize.width
             let targetHeight = newSize.width / aspectRatio2
@@ -116,14 +158,36 @@ class EditorImageViewController: UIViewController {
             let xOffset = (newSize.width - targetWidth) / 2
             targetRect = CGRect(x: xOffset, y: 0, width: targetWidth, height: targetHeight)
         }
-        
+
         // Vẽ hình ảnh thứ hai với content mode là aspectFill
         image2.draw(in: targetRect, blendMode: .normal, alpha: newImageView.alpha)
-        
+
         let combinedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         return combinedImage
+    }
+
+    @objc func saveDone(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+        let alert = UIAlertController(title: nil, message: "Save To Album", preferredStyle: .alert)
+        if let err = error {
+            alert.addAction(UIAlertAction(title: err.localizedDescription, style: .destructive))
+        } else {
+            alert.addAction(UIAlertAction(title: "Done", style: .destructive))
+        }
+        self.present(alert, animated: true)
+    }
+
+    @objc func imageTapped() {
+        editImage(previewImageView.image!, editModel: resultImageEditModel)
+    }
+
+    @objc func editButtonTapped() {
+        // Xử lý sự kiện khi nút Edit được nhấn
+    }
+
+    @objc func resetButtonTapped() {
+        // Xử lý sự kiện khi nút Reset được nhấn
     }
 }
 
