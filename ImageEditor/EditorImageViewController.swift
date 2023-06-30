@@ -17,6 +17,11 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var alphaSlider: UISlider!
 
     var resultImageEditModel: ZLEditImageModel?
+    
+    var hasImage = false
+    let image1 = UIImage(named: "below.png")!
+    let image2 = UIImage(named: "above.png")!
+    let image3 = UIImage(named: "combine_images.png")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +33,7 @@ class EditorImageViewController: UIViewController {
             .font: UIFont.boldSystemFont(ofSize: 18) // Font chữ của tiêu đề
         ]
         navigationController?.navigationBar.titleTextAttributes = titleAttributes
-    
+
 //        if #available(iOS 15.0, *) {
 //            let appearance = UINavigationBarAppearance()
 //            appearance.configureWithDefaultBackground()
@@ -40,11 +45,10 @@ class EditorImageViewController: UIViewController {
 //            navigationController?.navigationBar.barTintColor = UIColor.init(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
 //        }
 
-        let image1 = UIImage(named: "screen2.jpg")!
-        let image2 = UIImage(named: "screen4.jpg")!
-
-        mainImageView.image = image1
+        mainImageView.image = image2
         newImageView.image = image2
+        newImageView.alpha = 0.5
+        previewImageView.image = image3
 
         addTapGesturePreviewImage()
         createBarButton()
@@ -67,12 +71,17 @@ class EditorImageViewController: UIViewController {
 
     @IBAction func preview(_ sender: Any) {
         combineImage()
+//        previewImageView.image = newImageView.image
     }
 
     @IBAction func saveImageToAlbum(_ sender: Any) {
         UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? UIImage(named: "screen2.jpg")!, self, #selector(saveDone), nil)
     }
 
+    @IBAction func switchImage(_ sender: UISwitch) {
+        alphaLabel.text = sender.isOn ? "above" : "below"
+    }
+    
     func addTapGesturePreviewImage() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         previewImageView.isUserInteractionEnabled = true
@@ -90,10 +99,11 @@ class EditorImageViewController: UIViewController {
     }
 
     func editImage(_ image: UIImage, editModel: ZLEditImageModel?) {
-
-        ZLEditImageViewController.showEditImageVC(parentVC: self, image: image, editModel: editModel) { [weak self] resImage, editModel in
-            self?.previewImageView.image = resImage
-            self?.resultImageEditModel = editModel
+        ZLEditImageViewController.showEditImageVC(parentVC: self, image: image, editModel: nil) { [weak self] resImage, editModel in
+            DispatchQueue.main.async {
+                self?.previewImageView.image = resImage
+                self?.resultImageEditModel = editModel
+            }
         }
     }
 
@@ -127,10 +137,15 @@ class EditorImageViewController: UIViewController {
 
     func combineImage() {
         let combinedImage = combineImages(image1: mainImageView.image, image2: newImageView.image)
-
-        // Hiển thị hình ảnh kết hợp trên imageView
-        previewImageView.image = combinedImage
-        mainImageView.image = combinedImage
+        if let imageData = combinedImage?.pngData() {
+            let combinedImageDataWithHighQuality = UIImage(data: imageData)
+            // Lưu combinedImageDataWithHighQuality hoặc sử dụng nó cho mục đích khác
+    
+            // Hiển thị hình ảnh kết hợp trên imageView
+            previewImageView.image = combinedImageDataWithHighQuality
+            mainImageView.image = combinedImageDataWithHighQuality
+        }
+        
     }
 
     func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
@@ -183,11 +198,15 @@ class EditorImageViewController: UIViewController {
     }
 
     @objc func editButtonTapped() {
-        // Xử lý sự kiện khi nút Edit được nhấn
+        editImage(previewImageView.image!, editModel: resultImageEditModel)
     }
 
     @objc func resetButtonTapped() {
-        // Xử lý sự kiện khi nút Reset được nhấn
+        hasImage = false
+        mainImageView.image = image2
+        newImageView.image = image2
+        newImageView.alpha = 0.5
+        previewImageView.image = image3
     }
 }
 
@@ -195,7 +214,12 @@ extension EditorImageViewController: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             // Xử lý ảnh đã chọn hoặc chụp tại đây
-            newImageView.image = pickedImage
+            if hasImage {
+                newImageView.image = pickedImage
+            } else {
+                mainImageView.image = pickedImage
+                hasImage = true
+            }
         }
 
         picker.dismiss(animated: true, completion: nil)
