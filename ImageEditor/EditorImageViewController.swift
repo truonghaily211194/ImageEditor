@@ -17,12 +17,13 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var alphaSlider: UISlider!
     @IBOutlet weak var nameImageLabel: UILabel!
     @IBOutlet weak var switchControl: UISwitch!
-    
+
     var resultImageEditModel: ZLEditImageModel?
     var isImageAbove = false
     var alphaImageBelow: Float = 1.00
     var alphaImageAbove: Float = 0.50
-    
+    var isEditingNewImage = false
+
     var hasImage = false
     let image1 = UIImage(named: "below.png")!
     let image2 = UIImage(named: "above.png")!
@@ -38,7 +39,7 @@ class EditorImageViewController: UIViewController {
             .font: UIFont.boldSystemFont(ofSize: 18) // Font chữ của tiêu đề
         ]
         navigationController?.navigationBar.titleTextAttributes = titleAttributes
-        
+
         alphaLabel.text = "Opacity:   0.10"
         nameImageLabel.text = "Image below"
         mainImageView.image = image2
@@ -48,6 +49,7 @@ class EditorImageViewController: UIViewController {
         isImageAbove = true
 
         addTapGesturePreviewImage()
+        addTapGestureNewImage()
         createBarButton()
 
         ZLImageEditorConfiguration.default()
@@ -94,7 +96,13 @@ class EditorImageViewController: UIViewController {
             alphaSlider.value = alphaImageBelow
         }
     }
-    
+
+    func addTapGestureNewImage() {
+        newImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageNewTapped))
+        newImageView.addGestureRecognizer(tapGesture)
+    }
+
     func addTapGesturePreviewImage() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         previewImageView.isUserInteractionEnabled = true
@@ -113,9 +121,18 @@ class EditorImageViewController: UIViewController {
 
     func editImage(_ image: UIImage, editModel: ZLEditImageModel?) {
         ZLEditImageViewController.showEditImageVC(parentVC: self, image: image, editModel: nil) { [weak self] resImage, editModel in
+            guard let this = self else { return }
             DispatchQueue.main.async {
-                self?.previewImageView.image = resImage
-                self?.resultImageEditModel = editModel
+                if this.isEditingNewImage {
+                    if this.isImageAbove {
+                        this.newImageView.image = resImage
+                    } else {
+                        this.mainImageView.image = resImage
+                    }
+                } else {
+                    this.previewImageView.image = resImage
+                }
+                this.resultImageEditModel = editModel
             }
         }
     }
@@ -153,12 +170,12 @@ class EditorImageViewController: UIViewController {
         if let imageData = combinedImage?.pngData() {
             let combinedImageDataWithHighQuality = UIImage(data: imageData)
             // Lưu combinedImageDataWithHighQuality hoặc sử dụng nó cho mục đích khác
-    
+
             // Hiển thị hình ảnh kết hợp trên imageView
             previewImageView.image = combinedImageDataWithHighQuality
             mainImageView.image = combinedImageDataWithHighQuality
         }
-        
+
     }
 
     func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
@@ -205,12 +222,23 @@ class EditorImageViewController: UIViewController {
         }
         self.present(alert, animated: true)
     }
+    
+    @objc func imageNewTapped() {
+        isEditingNewImage = true
+        if isImageAbove {
+            editImage(newImageView.image!, editModel: resultImageEditModel)
+        } else {
+            editImage(mainImageView.image!, editModel: resultImageEditModel)
+        }
+    }
 
     @objc func imageTapped() {
+        isEditingNewImage = false
         editImage(previewImageView.image!, editModel: resultImageEditModel)
     }
 
     @objc func editButtonTapped() {
+        isEditingNewImage = false
         editImage(previewImageView.image!, editModel: resultImageEditModel)
     }
 
