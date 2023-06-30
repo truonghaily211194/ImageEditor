@@ -15,8 +15,13 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var alphaLabel: UILabel!
     @IBOutlet weak var alphaSlider: UISlider!
-
+    @IBOutlet weak var nameImageLabel: UILabel!
+    @IBOutlet weak var switchControl: UISwitch!
+    
     var resultImageEditModel: ZLEditImageModel?
+    var isImageAbove = false
+    var alphaImageBelow: Float = 1.00
+    var alphaImageAbove: Float = 0.50
     
     var hasImage = false
     let image1 = UIImage(named: "below.png")!
@@ -33,22 +38,14 @@ class EditorImageViewController: UIViewController {
             .font: UIFont.boldSystemFont(ofSize: 18) // Font chữ của tiêu đề
         ]
         navigationController?.navigationBar.titleTextAttributes = titleAttributes
-
-//        if #available(iOS 15.0, *) {
-//            let appearance = UINavigationBarAppearance()
-//            appearance.configureWithDefaultBackground()
-//            appearance.shadowColor = .clear
-//            appearance.backgroundColor = UIColor.init(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
-//            navigationController?.navigationBar.standardAppearance = appearance
-//            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
-//        } else {
-//            navigationController?.navigationBar.barTintColor = UIColor.init(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
-//        }
-
+        
+        alphaLabel.text = "Opacity:   0.10"
+        nameImageLabel.text = "Image below"
         mainImageView.image = image2
         newImageView.image = image2
         newImageView.alpha = 0.5
         previewImageView.image = image3
+        isImageAbove = true
 
         addTapGesturePreviewImage()
         createBarButton()
@@ -62,7 +59,16 @@ class EditorImageViewController: UIViewController {
     }
 
     @IBAction func changeValueAlpha(_ sender: UISlider) {
-        newImageView.alpha = CGFloat(sender.value)
+//        newImageView.alpha = CGFloat(sender.value)
+        let opacity = String(format: "%.2f", CGFloat(sender.value))
+        alphaLabel.text = "Opacity:   \(opacity)"
+        if isImageAbove {
+            newImageView.alpha = CGFloat(sender.value)
+            alphaImageAbove = Float(CGFloat(sender.value))
+        } else {
+            mainImageView.alpha = CGFloat(sender.value)
+            alphaImageBelow = Float(CGFloat(sender.value))
+        }
     }
 
     @IBAction func addImage(_ sender: Any) {
@@ -71,15 +77,22 @@ class EditorImageViewController: UIViewController {
 
     @IBAction func preview(_ sender: Any) {
         combineImage()
-//        previewImageView.image = newImageView.image
     }
 
     @IBAction func saveImageToAlbum(_ sender: Any) {
-        UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? UIImage(named: "screen2.jpg")!, self, #selector(saveDone), nil)
+        UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? image2, self, #selector(saveDone), nil)
     }
 
     @IBAction func switchImage(_ sender: UISwitch) {
-        alphaLabel.text = sender.isOn ? "above" : "below"
+        nameImageLabel.text = sender.isOn ? "Image above" : "Image below"
+        isImageAbove = sender.isOn
+        if isImageAbove {
+            alphaSlider.value = alphaImageAbove
+            alphaLabel.text = "Opacity:   \(String(format: "%.2f", alphaImageAbove))"
+        } else {
+            alphaLabel.text = "Opacity:   \(String(format: "%.2f", alphaImageBelow))"
+            alphaSlider.value = alphaImageBelow
+        }
     }
     
     func addTapGesturePreviewImage() {
@@ -203,10 +216,17 @@ class EditorImageViewController: UIViewController {
 
     @objc func resetButtonTapped() {
         hasImage = false
+        alphaLabel.text = "Opacity:   1.00"
+        nameImageLabel.text = "Image below"
         mainImageView.image = image2
         newImageView.image = image2
-        newImageView.alpha = 0.5
         previewImageView.image = image3
+        newImageView.alpha = 0.5
+        mainImageView.alpha = 1.0
+        alphaImageBelow = 1.00
+        alphaImageAbove = 0.50
+        switchControl.isOn = false
+        alphaSlider.value = alphaImageBelow
     }
 }
 
@@ -216,8 +236,20 @@ extension EditorImageViewController: UIImagePickerControllerDelegate, UINavigati
             // Xử lý ảnh đã chọn hoặc chụp tại đây
             if hasImage {
                 newImageView.image = pickedImage
+                newImageView.alpha = CGFloat(alphaImageAbove)
+                alphaLabel.text = "Opacity:   \(String(format: "%.2f", alphaImageAbove))"
+                nameImageLabel.text = "Image above"
+                switchControl.isOn = true
+                alphaSlider.value = alphaImageAbove
+                isImageAbove = true
             } else {
                 mainImageView.image = pickedImage
+                mainImageView.alpha = CGFloat(alphaImageBelow)
+                alphaLabel.text = "Opacity:   \(String(format: "%.2f", alphaImageBelow))"
+                nameImageLabel.text = "Image below"
+                switchControl.isOn = false
+                alphaSlider.value = alphaImageBelow
+                isImageAbove = false
                 hasImage = true
             }
         }
