@@ -298,7 +298,7 @@ extension EditorImageViewController: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             // Xử lý ảnh đã chọn hoặc chụp tại đây
-            if hasImage {
+            if hasImage && switchControl.isOn {
                 newImageView.image = pickedImage
                 newImageView.alpha = CGFloat(alphaImageAbove)
                 alphaLabel.text = "Opacity:   \(String(format: "%.2f", alphaImageAbove))"
