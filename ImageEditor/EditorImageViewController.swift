@@ -275,7 +275,17 @@ class EditorImageViewController: UIViewController {
 
     @objc func editButtonTapped() {
         isEditingNewImage = false
-        editImage(previewImageView.image!, editModel: resultImageEditModel)
+        guard let imageData = previewImageView.image!.jpegData(compressionQuality: 1) else {
+            showErrorMessage()
+            return
+        }
+        print("data byte: \(imageData.count)")
+
+        if let combinedImageDataWithHighQuality = UIImage(data: imageData) {
+            editImage(combinedImageDataWithHighQuality, editModel: resultImageEditModel)
+        } else {
+            editImage(previewImageView.image!, editModel: resultImageEditModel)
+        }
     }
 
     @objc func resetButtonTapped() {
