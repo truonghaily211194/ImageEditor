@@ -7,6 +7,7 @@
 
 import UIKit
 import ZLImageEditor
+import CoreImage
 
 class EditorImageViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class EditorImageViewController: UIViewController {
     @IBOutlet weak var nameImageLabel: UILabel!
     @IBOutlet weak var switchControl: UISwitch!
     @IBOutlet weak var imageAddButton: UIButton!
-    
+
     var resultImageEditModel: ZLEditImageModel?
     var isImageAbove = false
     var alphaImageBelow: Float = 1.00
@@ -150,7 +151,7 @@ class EditorImageViewController: UIViewController {
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
+
         alertController.popoverPresentationController?.sourceView = imageAddButton
         alertController.popoverPresentationController?.sourceRect = imageAddButton.bounds
 
@@ -172,16 +173,25 @@ class EditorImageViewController: UIViewController {
     }
 
     func combineImage() {
+//        let maxLen = 1024 * 1024 * 100 // 100mb
+        print("check combine in here")
         let combinedImage = combineImages(image1: mainImageView.image, image2: newImageView.image)
-        if let imageData = combinedImage?.pngData() {
-            let combinedImageDataWithHighQuality = UIImage(data: imageData)
-            // Lưu combinedImageDataWithHighQuality hoặc sử dụng nó cho mục đích khác
 
-            // Hiển thị hình ảnh kết hợp trên imageView
-            previewImageView.image = combinedImageDataWithHighQuality
-            mainImageView.image = combinedImageDataWithHighQuality
-        }
+        // Hiển thị hình ảnh kết hợp trên imageView
+        previewImageView.image = combinedImage
+        mainImageView.image = combinedImage
+    }
 
+    func showErrorMessage() {
+        let alert = UIAlertController(title: "Error", message: "Cannot process image", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+
+//        // Hiển thị alert
+//        if let viewController = UIApplication.shared.keyWindow?.rootViewController {
+//            viewController.present(alert, animated: true, completion: nil)
+//        }
+        present(alert, animated: true)
     }
 
     func combineImages(image1: UIImage?, image2: UIImage?) -> UIImage? {
@@ -228,19 +238,39 @@ class EditorImageViewController: UIViewController {
         }
         self.present(alert, animated: true)
     }
-    
+
     @objc func imageNewTapped() {
         isEditingNewImage = true
-        if isImageAbove {
-            editImage(newImageView.image!, editModel: resultImageEditModel)
+        var image = newImageView.image!
+        if !isImageAbove {
+            image = mainImageView.image!
+        }
+        guard let imageData = image.jpegData(compressionQuality: 1) else {
+            showErrorMessage()
+            return
+        }
+
+        if let combinedImageDataWithHighQuality = UIImage(data: imageData) {
+            editImage(combinedImageDataWithHighQuality, editModel: resultImageEditModel)
         } else {
-            editImage(mainImageView.image!, editModel: resultImageEditModel)
+            editImage(image, editModel: resultImageEditModel)
         }
     }
 
     @objc func imageTapped() {
         isEditingNewImage = false
-        editImage(previewImageView.image!, editModel: resultImageEditModel)
+//        editImage(previewImageView.image!, editModel: resultImageEditModel)
+        guard let imageData = previewImageView.image!.jpegData(compressionQuality: 1) else {
+            showErrorMessage()
+            return
+        }
+        print("data byte: \(imageData.count)")
+
+        if let combinedImageDataWithHighQuality = UIImage(data: imageData) {
+            editImage(combinedImageDataWithHighQuality, editModel: resultImageEditModel)
+        } else {
+            editImage(previewImageView.image!, editModel: resultImageEditModel)
+        }
     }
 
     @objc func editButtonTapped() {
