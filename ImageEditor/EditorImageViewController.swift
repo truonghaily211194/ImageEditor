@@ -8,6 +8,7 @@
 import UIKit
 import ZLImageEditor
 import CoreImage
+import StoreKit
 
 class EditorImageViewController: UIViewController {
 
@@ -30,6 +31,10 @@ class EditorImageViewController: UIViewController {
     let image1 = UIImage(named: "below.png")!
     let image2 = UIImage(named: "above.png")!
     let image3 = UIImage(named: "combine_images.png")!
+    var activityIndicator: UIActivityIndicatorView!
+    var overlayView: UIView!
+
+    private var products: [SKProduct] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +58,7 @@ class EditorImageViewController: UIViewController {
         addTapGesturePreviewImage()
         addTapGestureNewImage()
         createBarButton()
+        addIndicator()
 
         ZLImageEditorConfiguration.default()
             .fontChooserContainerView(FontChooserContainerView())
@@ -60,6 +66,20 @@ class EditorImageViewController: UIViewController {
             .adjustTools([.brightness, .contrast, .saturation])
             .canRedo(true)
 
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        IAPManager.shared.getProducts { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let products):
+                    self.products = products
+                case .failure(let error):
+                    self.showAlert(message: error.localizedDescription)
+                }
+            }
+        }
     }
 
     @IBAction func changeValueAlpha(_ sender: UISlider) {
@@ -84,7 +104,14 @@ class EditorImageViewController: UIViewController {
     }
 
     @IBAction func saveImageToAlbum(_ sender: Any) {
-        UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? image2, self, #selector(saveDone), nil)
+        let isPurchased = UserDefaults.standard.bool(forKey: "In-AppPurchase")
+        if isPurchased {
+            UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? image2, self, #selector(saveDone), nil)
+        } else {
+            DispatchQueue.main.async {
+                self.verifyBeforeBuy()
+            }
+        }
     }
 
     @IBAction func switchImage(_ sender: UISwitch) {
@@ -98,6 +125,49 @@ class EditorImageViewController: UIViewController {
             alphaSlider.value = alphaImageBelow
         }
     }
+
+    func addIndicator() {
+        // Tạo overlay view
+        overlayView = UIView(frame: view.bounds)
+        overlayView.backgroundColor = UIColor(white: 0, alpha: 0.0) // Màu đậm mờ
+        overlayView.isHidden = true
+        overlayView.translatesAutoresizingMaskIntoConstraints = false
+
+        // Thêm overlay view vào view chính
+        view.addSubview(overlayView)
+        NSLayoutConstraint.activate([
+            overlayView.topAnchor.constraint(equalTo: view.topAnchor),
+            overlayView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            overlayView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            overlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+
+        // Tạo một UIActivityIndicatorView và đặt nó vào overlay view
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = overlayView.center
+        overlayView.addSubview(activityIndicator)
+    }
+
+    func showActivityIndicator() {
+        // Hiển thị overlay view và bật indicator
+        overlayView.isHidden = false
+        activityIndicator.startAnimating()
+        if let rightBarButtonItem = navigationItem.rightBarButtonItem, let leftBarButton = navigationItem.leftBarButtonItem {
+            rightBarButtonItem.isEnabled = false
+            leftBarButton.isEnabled = false
+        }
+    }
+
+    func hideActivityIndicator() {
+        // Ẩn overlay view và tắt indicator
+        overlayView.isHidden = true
+        activityIndicator.stopAnimating()
+        if let rightBarButtonItem = navigationItem.rightBarButtonItem, let leftBarButton = navigationItem.leftBarButtonItem {
+            rightBarButtonItem.isEnabled = true
+            leftBarButton.isEnabled = true
+        }
+    }
+
 
     func addTapGestureNewImage() {
         newImageView.isUserInteractionEnabled = true
@@ -333,5 +403,62 @@ extension EditorImageViewController: UIImagePickerControllerDelegate, UINavigati
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension EditorImageViewController {
+
+    private func verifyBeforeBuy() {
+        guard let product = product(with: "com.haily.211194.combineimage"),
+            let price = IAPManager.shared.getPriceFormatted(for: product) else {
+            return
+        }
+
+        let alertController = UIAlertController(title: product.localizedTitle,
+            message: product.localizedDescription,
+            preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "Buy for \(price)", style: .default, handler: { (_) in
+            DispatchQueue.main.async {
+                self.buy(product: product)
+            }
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    private func product(with id: String) -> SKProduct? {
+        return products.first(where: { $0.productIdentifier == id })
+    }
+
+    private func buy(product: SKProduct) {
+        showActivityIndicator()
+        if !IAPManager.shared.canMakePayments() {
+            self.showAlert(message: "In-App Purchases are not allowed in this device.")
+        } else {
+            IAPManager.shared.buy(product: product) { result in
+                self.hideActivityIndicator()
+                switch result {
+                case .success(let success):
+                    if success {
+                        UserDefaults.standard.set(true, forKey: "In-AppPurchase")
+                        UIImageWriteToSavedPhotosAlbum(self.previewImageView.image ?? self.image2, self, #selector(self.saveDone), nil)
+//                        self.showAlert(message: "Buy success")
+                    } else {
+                        self.showAlert(message: "Your in-app purchase error, please try again.")
+                    }
+                case .failure(let failure):
+                    self.showAlert(message: failure.localizedDescription)
+                }
+            }
+        }
+    }
+
+    func showAlert(title: String = "",
+        message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
