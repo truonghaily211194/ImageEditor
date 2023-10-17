@@ -10,6 +10,9 @@
 		02513F7029ABC7123C2CA8B6 /* Pods_ImageEditorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC0C3C4727E6083BF1DC6C /* Pods_ImageEditorTests.framework */; };
 		A64D85033125630D774EE6DF /* Pods_ImageEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478AA26B00FD5A549BA7200 /* Pods_ImageEditor.framework */; };
 		BBCCCAE45B8AB542A5C1678E /* Pods_ImageEditor_ImageEditorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB752599C66AB396A22FBBA /* Pods_ImageEditor_ImageEditorUITests.framework */; };
+		C778E9B72AD8FC7600EA685F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C778E9B62AD8FC7600EA685F /* StoreKit.framework */; };
+		C778E9B92AD9368C00EA685F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C778E9B82AD9368C00EA685F /* IAPManager.swift */; };
+		C778E9BB2AD939A600EA685F /* IAPProductIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C778E9BA2AD939A600EA685F /* IAPProductIDs.plist */; };
 		C7B01BA42A4D45E000595EA7 /* EditorImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B01BA22A4D45E000595EA7 /* EditorImageViewController.swift */; };
 		C7B01BA52A4D45E000595EA7 /* EditorImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B01BA32A4D45E000595EA7 /* EditorImageViewController.xib */; };
 		C7B5E0372A4DC3CE00603CCF /* FontChooserContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0362A4DC3CE00603CCF /* FontChooserContainerView.swift */; };
@@ -103,6 +106,9 @@
 		85EEEC0CB211F1A3C54F5E58 /* Pods-ImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageEditor.debug.xcconfig"; path = "Target Support Files/Pods-ImageEditor/Pods-ImageEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		ABB752599C66AB396A22FBBA /* Pods_ImageEditor_ImageEditorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageEditor_ImageEditorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24C92E822270BE771802E32 /* Pods-ImageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageEditor.release.xcconfig"; path = "Target Support Files/Pods-ImageEditor/Pods-ImageEditor.release.xcconfig"; sourceTree = "<group>"; };
+		C778E9B62AD8FC7600EA685F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C778E9B82AD9368C00EA685F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		C778E9BA2AD939A600EA685F /* IAPProductIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IAPProductIDs.plist; sourceTree = "<group>"; };
 		C7B01BA22A4D45E000595EA7 /* EditorImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorImageViewController.swift; sourceTree = "<group>"; };
 		C7B01BA32A4D45E000595EA7 /* EditorImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorImageViewController.xib; sourceTree = "<group>"; };
 		C7B5E0362A4DC3CE00603CCF /* FontChooserContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChooserContainerView.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64D85033125630D774EE6DF /* Pods_ImageEditor.framework in Frameworks */,
+				C778E9B72AD8FC7600EA685F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +218,7 @@
 		2521FA40063F53C419B40A4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C778E9B62AD8FC7600EA685F /* StoreKit.framework */,
 				8478AA26B00FD5A549BA7200 /* Pods_ImageEditor.framework */,
 				ABB752599C66AB396A22FBBA /* Pods_ImageEditor_ImageEditorUITests.framework */,
 				D6BC0C3C4727E6083BF1DC6C /* Pods_ImageEditorTests.framework */,
@@ -338,6 +346,8 @@
 				C7B01BA32A4D45E000595EA7 /* EditorImageViewController.xib */,
 				C7B5E0362A4DC3CE00603CCF /* FontChooserContainerView.swift */,
 				C7B5E0AB2A4F28DB00603CCF /* InfoPlist.strings */,
+				C778E9B82AD9368C00EA685F /* IAPManager.swift */,
+				C778E9BA2AD939A600EA685F /* IAPProductIDs.plist */,
 			);
 			path = ImageEditor;
 			sourceTree = "<group>";
@@ -468,6 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C778E9BB2AD939A600EA685F /* IAPProductIDs.plist in Resources */,
 				C7E70CC02A45396F00C6F285 /* LaunchScreen.storyboard in Resources */,
 				C7B5E05B2A4DC3FC00603CCF /* Sullivan-Regular.otf in Resources */,
 				C7E70CBD2A45396F00C6F285 /* Assets.xcassets in Resources */,
@@ -618,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C778E9B92AD9368C00EA685F /* IAPManager.swift in Sources */,
 				C7B5E0E22A4F297200603CCF /* ConstraintMakerRelatable+Extensions.swift in Sources */,
 				C7B5E0F82A4F297200603CCF /* ConstraintMakerRelatable.swift in Sources */,
 				C7B5E0E52A4F297200603CCF /* ConstraintView.swift in Sources */,
@@ -827,7 +839,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = XSH88V68U6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageEditor/Info.plist;
@@ -859,7 +871,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = XSH88V68U6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageEditor/Info.plist;
