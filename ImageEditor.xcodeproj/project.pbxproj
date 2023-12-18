@@ -15,64 +15,7 @@
 		C778E9BB2AD939A600EA685F /* IAPProductIDs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C778E9BA2AD939A600EA685F /* IAPProductIDs.plist */; };
 		C7B01BA42A4D45E000595EA7 /* EditorImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B01BA22A4D45E000595EA7 /* EditorImageViewController.swift */; };
 		C7B01BA52A4D45E000595EA7 /* EditorImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B01BA32A4D45E000595EA7 /* EditorImageViewController.xib */; };
-		C7B5E0372A4DC3CE00603CCF /* FontChooserContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0362A4DC3CE00603CCF /* FontChooserContainerView.swift */; };
-		C7B5E04C2A4DC3FC00603CCF /* cubano-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0392A4DC3FC00603CCF /* cubano-regular-webfont.ttf */; };
-		C7B5E04D2A4DC3FC00603CCF /* Homestead-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E03A2A4DC3FC00603CCF /* Homestead-Regular.ttf */; };
-		C7B5E04E2A4DC3FC00603CCF /* Haymaker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E03B2A4DC3FC00603CCF /* Haymaker.ttf */; };
-		C7B5E04F2A4DC3FC00603CCF /* Liberator.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E03C2A4DC3FC00603CCF /* Liberator.ttf */; };
-		C7B5E0502A4DC3FC00603CCF /* AbrahamLincoln.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E03D2A4DC3FC00603CCF /* AbrahamLincoln.ttf */; };
-		C7B5E0512A4DC3FC00603CCF /* mensch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E03E2A4DC3FC00603CCF /* mensch.ttf */; };
-		C7B5E0522A4DC3FC00603CCF /* Franchise-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E03F2A4DC3FC00603CCF /* Franchise-Bold.ttf */; };
-		C7B5E0532A4DC3FC00603CCF /* GearedSlab.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0402A4DC3FC00603CCF /* GearedSlab.ttf */; };
-		C7B5E0542A4DC3FC00603CCF /* Airship 27-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0412A4DC3FC00603CCF /* Airship 27-Regular.ttf */; };
-		C7B5E0552A4DC3FC00603CCF /* ValenciaRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0422A4DC3FC00603CCF /* ValenciaRegular.otf */; };
-		C7B5E0562A4DC3FC00603CCF /* Muncie.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0432A4DC3FC00603CCF /* Muncie.ttf */; };
-		C7B5E0572A4DC3FC00603CCF /* governor.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0442A4DC3FC00603CCF /* governor.ttf */; };
-		C7B5E0582A4DC3FC00603CCF /* Tommaso.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0452A4DC3FC00603CCF /* Tommaso.ttf */; };
-		C7B5E0592A4DC3FC00603CCF /* Bender-Inline.otf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0462A4DC3FC00603CCF /* Bender-Inline.otf */; };
-		C7B5E05A2A4DC3FC00603CCF /* MavenProLight-200.otf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0472A4DC3FC00603CCF /* MavenProLight-200.otf */; };
-		C7B5E05B2A4DC3FC00603CCF /* Sullivan-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0482A4DC3FC00603CCF /* Sullivan-Regular.otf */; };
-		C7B5E05C2A4DC3FC00603CCF /* BLANCH_CONDENSED.otf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0492A4DC3FC00603CCF /* BLANCH_CONDENSED.otf */; };
-		C7B5E05D2A4DC3FC00603CCF /* vevey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E04A2A4DC3FC00603CCF /* vevey.ttf */; };
-		C7B5E05E2A4DC3FC00603CCF /* Arvil_Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E04B2A4DC3FC00603CCF /* Arvil_Sans.ttf */; };
 		C7B5E0AC2A4F28DB00603CCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7B5E0AB2A4F28DB00603CCF /* InfoPlist.strings */; };
-		C7B5E0D42A4F297200603CCF /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0AE2A4F297200603CCF /* ConstraintMultiplierTarget.swift */; };
-		C7B5E0D52A4F297200603CCF /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0AF2A4F297200603CCF /* LayoutConstraintItem.swift */; };
-		C7B5E0D62A4F297200603CCF /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B02A4F297200603CCF /* ConstraintDescription.swift */; };
-		C7B5E0D72A4F297200603CCF /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B12A4F297200603CCF /* ConstraintMakerPriortizable.swift */; };
-		C7B5E0D82A4F297200603CCF /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B22A4F297200603CCF /* ConstraintAttributes.swift */; };
-		C7B5E0D92A4F297200603CCF /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B32A4F297200603CCF /* ConstraintViewDSL.swift */; };
-		C7B5E0DA2A4F297200603CCF /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B42A4F297200603CCF /* ConstraintPriorityTarget.swift */; };
-		C7B5E0DB2A4F297200603CCF /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B52A4F297200603CCF /* ConstraintInsets.swift */; };
-		C7B5E0DC2A4F297200603CCF /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B62A4F297200603CCF /* ConstraintMakerFinalizable.swift */; };
-		C7B5E0DD2A4F297200603CCF /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B72A4F297200603CCF /* ConstraintDSL.swift */; };
-		C7B5E0DE2A4F297200603CCF /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B82A4F297200603CCF /* ConstraintMakerExtendable.swift */; };
-		C7B5E0DF2A4F297200603CCF /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0B92A4F297200603CCF /* ConstraintPriority.swift */; };
-		C7B5E0E02A4F297200603CCF /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0BA2A4F297200603CCF /* ConstraintInsetTarget.swift */; };
-		C7B5E0E12A4F297200603CCF /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0BB2A4F297200603CCF /* ConstraintDirectionalInsetTarget.swift */; };
-		C7B5E0E22A4F297200603CCF /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0BD2A4F297200603CCF /* ConstraintMakerRelatable+Extensions.swift */; };
-		C7B5E0E32A4F297200603CCF /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0BE2A4F297200603CCF /* ConstraintConfig.swift */; };
-		C7B5E0E42A4F297200603CCF /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0BF2A4F297200603CCF /* UILayoutSupport+Extensions.swift */; };
-		C7B5E0E52A4F297200603CCF /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C02A4F297200603CCF /* ConstraintView.swift */; };
-		C7B5E0E62A4F297200603CCF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C12A4F297200603CCF /* ConstraintLayoutGuide.swift */; };
-		C7B5E0E72A4F297200603CCF /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C22A4F297200603CCF /* ConstraintLayoutSupport.swift */; };
-		C7B5E0E82A4F297200603CCF /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C32A4F297200603CCF /* Typealiases.swift */; };
-		C7B5E0E92A4F297200603CCF /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C42A4F297200603CCF /* ConstraintConstantTarget.swift */; };
-		C7B5E0EA2A4F297200603CCF /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C52A4F297200603CCF /* ConstraintOffsetTarget.swift */; };
-		C7B5E0EB2A4F297200603CCF /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C62A4F297200603CCF /* ConstraintMakerEditable.swift */; };
-		C7B5E0EC2A4F297200603CCF /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C72A4F297200603CCF /* ConstraintMaker.swift */; };
-		C7B5E0ED2A4F297200603CCF /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C82A4F297200603CCF /* ConstraintRelation.swift */; };
-		C7B5E0EE2A4F297200603CCF /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0C92A4F297200603CCF /* ConstraintLayoutGuideDSL.swift */; };
-		C7B5E0EF2A4F297200603CCF /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0CA2A4F297200603CCF /* ConstraintView+Extensions.swift */; };
-		C7B5E0F02A4F297200603CCF /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0CB2A4F297200603CCF /* ConstraintItem.swift */; };
-		C7B5E0F12A4F297200603CCF /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0CC2A4F297200603CCF /* Constraint.swift */; };
-		C7B5E0F22A4F297200603CCF /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0CD2A4F297200603CCF /* Debugging.swift */; };
-		C7B5E0F32A4F297200603CCF /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0CE2A4F297200603CCF /* ConstraintRelatableTarget.swift */; };
-		C7B5E0F42A4F297200603CCF /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0CF2A4F297200603CCF /* LayoutConstraint.swift */; };
-		C7B5E0F52A4F297200603CCF /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0D02A4F297200603CCF /* ConstraintLayoutGuide+Extensions.swift */; };
-		C7B5E0F62A4F297200603CCF /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0D12A4F297200603CCF /* ConstraintDirectionalInsets.swift */; };
-		C7B5E0F72A4F297200603CCF /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0D22A4F297200603CCF /* ConstraintLayoutSupportDSL.swift */; };
-		C7B5E0F82A4F297200603CCF /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5E0D32A4F297200603CCF /* ConstraintMakerRelatable.swift */; };
 		C7E70CB42A45396C00C6F285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E70CB32A45396C00C6F285 /* AppDelegate.swift */; };
 		C7E70CB62A45396C00C6F285 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E70CB52A45396C00C6F285 /* SceneDelegate.swift */; };
 		C7E70CBD2A45396F00C6F285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E70CBC2A45396F00C6F285 /* Assets.xcassets */; };
@@ -111,65 +54,7 @@
 		C778E9BA2AD939A600EA685F /* IAPProductIDs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IAPProductIDs.plist; sourceTree = "<group>"; };
 		C7B01BA22A4D45E000595EA7 /* EditorImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorImageViewController.swift; sourceTree = "<group>"; };
 		C7B01BA32A4D45E000595EA7 /* EditorImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditorImageViewController.xib; sourceTree = "<group>"; };
-		C7B5E0362A4DC3CE00603CCF /* FontChooserContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChooserContainerView.swift; sourceTree = "<group>"; };
-		C7B5E0392A4DC3FC00603CCF /* cubano-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cubano-regular-webfont.ttf"; sourceTree = "<group>"; };
-		C7B5E03A2A4DC3FC00603CCF /* Homestead-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Homestead-Regular.ttf"; sourceTree = "<group>"; };
-		C7B5E03B2A4DC3FC00603CCF /* Haymaker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Haymaker.ttf; sourceTree = "<group>"; };
-		C7B5E03C2A4DC3FC00603CCF /* Liberator.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Liberator.ttf; sourceTree = "<group>"; };
-		C7B5E03D2A4DC3FC00603CCF /* AbrahamLincoln.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AbrahamLincoln.ttf; sourceTree = "<group>"; };
-		C7B5E03E2A4DC3FC00603CCF /* mensch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mensch.ttf; sourceTree = "<group>"; };
-		C7B5E03F2A4DC3FC00603CCF /* Franchise-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Franchise-Bold.ttf"; sourceTree = "<group>"; };
-		C7B5E0402A4DC3FC00603CCF /* GearedSlab.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GearedSlab.ttf; sourceTree = "<group>"; };
-		C7B5E0412A4DC3FC00603CCF /* Airship 27-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Airship 27-Regular.ttf"; sourceTree = "<group>"; };
-		C7B5E0422A4DC3FC00603CCF /* ValenciaRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ValenciaRegular.otf; sourceTree = "<group>"; };
-		C7B5E0432A4DC3FC00603CCF /* Muncie.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muncie.ttf; sourceTree = "<group>"; };
-		C7B5E0442A4DC3FC00603CCF /* governor.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = governor.ttf; sourceTree = "<group>"; };
-		C7B5E0452A4DC3FC00603CCF /* Tommaso.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tommaso.ttf; sourceTree = "<group>"; };
-		C7B5E0462A4DC3FC00603CCF /* Bender-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bender-Inline.otf"; sourceTree = "<group>"; };
-		C7B5E0472A4DC3FC00603CCF /* MavenProLight-200.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-200.otf"; sourceTree = "<group>"; };
-		C7B5E0482A4DC3FC00603CCF /* Sullivan-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sullivan-Regular.otf"; sourceTree = "<group>"; };
-		C7B5E0492A4DC3FC00603CCF /* BLANCH_CONDENSED.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BLANCH_CONDENSED.otf; sourceTree = "<group>"; };
-		C7B5E04A2A4DC3FC00603CCF /* vevey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = vevey.ttf; sourceTree = "<group>"; };
-		C7B5E04B2A4DC3FC00603CCF /* Arvil_Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arvil_Sans.ttf; sourceTree = "<group>"; };
 		C7B5E0AB2A4F28DB00603CCF /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		C7B5E0AE2A4F297200603CCF /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		C7B5E0AF2A4F297200603CCF /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		C7B5E0B02A4F297200603CCF /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
-		C7B5E0B12A4F297200603CCF /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		C7B5E0B22A4F297200603CCF /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
-		C7B5E0B32A4F297200603CCF /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		C7B5E0B42A4F297200603CCF /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		C7B5E0B52A4F297200603CCF /* ConstraintInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsets.swift; sourceTree = "<group>"; };
-		C7B5E0B62A4F297200603CCF /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		C7B5E0B72A4F297200603CCF /* ConstraintDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDSL.swift; sourceTree = "<group>"; };
-		C7B5E0B82A4F297200603CCF /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		C7B5E0B92A4F297200603CCF /* ConstraintPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriority.swift; sourceTree = "<group>"; };
-		C7B5E0BA2A4F297200603CCF /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		C7B5E0BB2A4F297200603CCF /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		C7B5E0BC2A4F297200603CCF /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
-		C7B5E0BD2A4F297200603CCF /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
-		C7B5E0BE2A4F297200603CCF /* ConstraintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConfig.swift; sourceTree = "<group>"; };
-		C7B5E0BF2A4F297200603CCF /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		C7B5E0C02A4F297200603CCF /* ConstraintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
-		C7B5E0C12A4F297200603CCF /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		C7B5E0C22A4F297200603CCF /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		C7B5E0C32A4F297200603CCF /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		C7B5E0C42A4F297200603CCF /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		C7B5E0C52A4F297200603CCF /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		C7B5E0C62A4F297200603CCF /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		C7B5E0C72A4F297200603CCF /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
-		C7B5E0C82A4F297200603CCF /* ConstraintRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
-		C7B5E0C92A4F297200603CCF /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		C7B5E0CA2A4F297200603CCF /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		C7B5E0CB2A4F297200603CCF /* ConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
-		C7B5E0CC2A4F297200603CCF /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
-		C7B5E0CD2A4F297200603CCF /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
-		C7B5E0CE2A4F297200603CCF /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		C7B5E0CF2A4F297200603CCF /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
-		C7B5E0D02A4F297200603CCF /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		C7B5E0D12A4F297200603CCF /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
-		C7B5E0D22A4F297200603CCF /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		C7B5E0D32A4F297200603CCF /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		C7E70CB02A45396C00C6F285 /* ImageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E70CB32A45396C00C6F285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7E70CB52A45396C00C6F285 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,77 +124,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C7B5E0382A4DC3FC00603CCF /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				C7B5E0392A4DC3FC00603CCF /* cubano-regular-webfont.ttf */,
-				C7B5E03A2A4DC3FC00603CCF /* Homestead-Regular.ttf */,
-				C7B5E03B2A4DC3FC00603CCF /* Haymaker.ttf */,
-				C7B5E03C2A4DC3FC00603CCF /* Liberator.ttf */,
-				C7B5E03D2A4DC3FC00603CCF /* AbrahamLincoln.ttf */,
-				C7B5E03E2A4DC3FC00603CCF /* mensch.ttf */,
-				C7B5E03F2A4DC3FC00603CCF /* Franchise-Bold.ttf */,
-				C7B5E0402A4DC3FC00603CCF /* GearedSlab.ttf */,
-				C7B5E0412A4DC3FC00603CCF /* Airship 27-Regular.ttf */,
-				C7B5E0422A4DC3FC00603CCF /* ValenciaRegular.otf */,
-				C7B5E0432A4DC3FC00603CCF /* Muncie.ttf */,
-				C7B5E0442A4DC3FC00603CCF /* governor.ttf */,
-				C7B5E0452A4DC3FC00603CCF /* Tommaso.ttf */,
-				C7B5E0462A4DC3FC00603CCF /* Bender-Inline.otf */,
-				C7B5E0472A4DC3FC00603CCF /* MavenProLight-200.otf */,
-				C7B5E0482A4DC3FC00603CCF /* Sullivan-Regular.otf */,
-				C7B5E0492A4DC3FC00603CCF /* BLANCH_CONDENSED.otf */,
-				C7B5E04A2A4DC3FC00603CCF /* vevey.ttf */,
-				C7B5E04B2A4DC3FC00603CCF /* Arvil_Sans.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		C7B5E0AD2A4F297200603CCF /* SnapKit */ = {
-			isa = PBXGroup;
-			children = (
-				C7B5E0AE2A4F297200603CCF /* ConstraintMultiplierTarget.swift */,
-				C7B5E0AF2A4F297200603CCF /* LayoutConstraintItem.swift */,
-				C7B5E0B02A4F297200603CCF /* ConstraintDescription.swift */,
-				C7B5E0B12A4F297200603CCF /* ConstraintMakerPriortizable.swift */,
-				C7B5E0B22A4F297200603CCF /* ConstraintAttributes.swift */,
-				C7B5E0B32A4F297200603CCF /* ConstraintViewDSL.swift */,
-				C7B5E0B42A4F297200603CCF /* ConstraintPriorityTarget.swift */,
-				C7B5E0B52A4F297200603CCF /* ConstraintInsets.swift */,
-				C7B5E0B62A4F297200603CCF /* ConstraintMakerFinalizable.swift */,
-				C7B5E0B72A4F297200603CCF /* ConstraintDSL.swift */,
-				C7B5E0B82A4F297200603CCF /* ConstraintMakerExtendable.swift */,
-				C7B5E0B92A4F297200603CCF /* ConstraintPriority.swift */,
-				C7B5E0BA2A4F297200603CCF /* ConstraintInsetTarget.swift */,
-				C7B5E0BB2A4F297200603CCF /* ConstraintDirectionalInsetTarget.swift */,
-				C7B5E0BC2A4F297200603CCF /* SnapKit.h */,
-				C7B5E0BD2A4F297200603CCF /* ConstraintMakerRelatable+Extensions.swift */,
-				C7B5E0BE2A4F297200603CCF /* ConstraintConfig.swift */,
-				C7B5E0BF2A4F297200603CCF /* UILayoutSupport+Extensions.swift */,
-				C7B5E0C02A4F297200603CCF /* ConstraintView.swift */,
-				C7B5E0C12A4F297200603CCF /* ConstraintLayoutGuide.swift */,
-				C7B5E0C22A4F297200603CCF /* ConstraintLayoutSupport.swift */,
-				C7B5E0C32A4F297200603CCF /* Typealiases.swift */,
-				C7B5E0C42A4F297200603CCF /* ConstraintConstantTarget.swift */,
-				C7B5E0C52A4F297200603CCF /* ConstraintOffsetTarget.swift */,
-				C7B5E0C62A4F297200603CCF /* ConstraintMakerEditable.swift */,
-				C7B5E0C72A4F297200603CCF /* ConstraintMaker.swift */,
-				C7B5E0C82A4F297200603CCF /* ConstraintRelation.swift */,
-				C7B5E0C92A4F297200603CCF /* ConstraintLayoutGuideDSL.swift */,
-				C7B5E0CA2A4F297200603CCF /* ConstraintView+Extensions.swift */,
-				C7B5E0CB2A4F297200603CCF /* ConstraintItem.swift */,
-				C7B5E0CC2A4F297200603CCF /* Constraint.swift */,
-				C7B5E0CD2A4F297200603CCF /* Debugging.swift */,
-				C7B5E0CE2A4F297200603CCF /* ConstraintRelatableTarget.swift */,
-				C7B5E0CF2A4F297200603CCF /* LayoutConstraint.swift */,
-				C7B5E0D02A4F297200603CCF /* ConstraintLayoutGuide+Extensions.swift */,
-				C7B5E0D12A4F297200603CCF /* ConstraintDirectionalInsets.swift */,
-				C7B5E0D22A4F297200603CCF /* ConstraintLayoutSupportDSL.swift */,
-				C7B5E0D32A4F297200603CCF /* ConstraintMakerRelatable.swift */,
-			);
-			path = SnapKit;
-			sourceTree = "<group>";
-		};
 		C7E70CA72A45396B00C6F285 = {
 			isa = PBXGroup;
 			children = (
@@ -335,8 +149,6 @@
 		C7E70CB22A45396C00C6F285 /* ImageEditor */ = {
 			isa = PBXGroup;
 			children = (
-				C7B5E0AD2A4F297200603CCF /* SnapKit */,
-				C7B5E0382A4DC3FC00603CCF /* Fonts */,
 				C7E70CB32A45396C00C6F285 /* AppDelegate.swift */,
 				C7E70CB52A45396C00C6F285 /* SceneDelegate.swift */,
 				C7E70CBC2A45396F00C6F285 /* Assets.xcassets */,
@@ -344,7 +156,6 @@
 				C7E70CC12A45396F00C6F285 /* Info.plist */,
 				C7B01BA22A4D45E000595EA7 /* EditorImageViewController.swift */,
 				C7B01BA32A4D45E000595EA7 /* EditorImageViewController.xib */,
-				C7B5E0362A4DC3CE00603CCF /* FontChooserContainerView.swift */,
 				C7B5E0AB2A4F28DB00603CCF /* InfoPlist.strings */,
 				C778E9B82AD9368C00EA685F /* IAPManager.swift */,
 				C778E9BA2AD939A600EA685F /* IAPProductIDs.plist */,
@@ -480,28 +291,9 @@
 			files = (
 				C778E9BB2AD939A600EA685F /* IAPProductIDs.plist in Resources */,
 				C7E70CC02A45396F00C6F285 /* LaunchScreen.storyboard in Resources */,
-				C7B5E05B2A4DC3FC00603CCF /* Sullivan-Regular.otf in Resources */,
 				C7E70CBD2A45396F00C6F285 /* Assets.xcassets in Resources */,
-				C7B5E04E2A4DC3FC00603CCF /* Haymaker.ttf in Resources */,
-				C7B5E0532A4DC3FC00603CCF /* GearedSlab.ttf in Resources */,
-				C7B5E04D2A4DC3FC00603CCF /* Homestead-Regular.ttf in Resources */,
-				C7B5E0572A4DC3FC00603CCF /* governor.ttf in Resources */,
-				C7B5E0552A4DC3FC00603CCF /* ValenciaRegular.otf in Resources */,
-				C7B5E05D2A4DC3FC00603CCF /* vevey.ttf in Resources */,
 				C7B5E0AC2A4F28DB00603CCF /* InfoPlist.strings in Resources */,
-				C7B5E0562A4DC3FC00603CCF /* Muncie.ttf in Resources */,
-				C7B5E0542A4DC3FC00603CCF /* Airship 27-Regular.ttf in Resources */,
-				C7B5E05E2A4DC3FC00603CCF /* Arvil_Sans.ttf in Resources */,
-				C7B5E0502A4DC3FC00603CCF /* AbrahamLincoln.ttf in Resources */,
-				C7B5E05A2A4DC3FC00603CCF /* MavenProLight-200.otf in Resources */,
-				C7B5E0512A4DC3FC00603CCF /* mensch.ttf in Resources */,
-				C7B5E0592A4DC3FC00603CCF /* Bender-Inline.otf in Resources */,
-				C7B5E05C2A4DC3FC00603CCF /* BLANCH_CONDENSED.otf in Resources */,
-				C7B5E04C2A4DC3FC00603CCF /* cubano-regular-webfont.ttf in Resources */,
-				C7B5E04F2A4DC3FC00603CCF /* Liberator.ttf in Resources */,
-				C7B5E0582A4DC3FC00603CCF /* Tommaso.ttf in Resources */,
 				C7B01BA52A4D45E000595EA7 /* EditorImageViewController.xib in Resources */,
-				C7B5E0522A4DC3FC00603CCF /* Franchise-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,47 +422,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C778E9B92AD9368C00EA685F /* IAPManager.swift in Sources */,
-				C7B5E0E22A4F297200603CCF /* ConstraintMakerRelatable+Extensions.swift in Sources */,
-				C7B5E0F82A4F297200603CCF /* ConstraintMakerRelatable.swift in Sources */,
-				C7B5E0E52A4F297200603CCF /* ConstraintView.swift in Sources */,
-				C7B5E0F12A4F297200603CCF /* Constraint.swift in Sources */,
-				C7B5E0EC2A4F297200603CCF /* ConstraintMaker.swift in Sources */,
-				C7B5E0F72A4F297200603CCF /* ConstraintLayoutSupportDSL.swift in Sources */,
-				C7B5E0E82A4F297200603CCF /* Typealiases.swift in Sources */,
-				C7B5E0DB2A4F297200603CCF /* ConstraintInsets.swift in Sources */,
-				C7B5E0D82A4F297200603CCF /* ConstraintAttributes.swift in Sources */,
-				C7B5E0D92A4F297200603CCF /* ConstraintViewDSL.swift in Sources */,
-				C7B5E0D72A4F297200603CCF /* ConstraintMakerPriortizable.swift in Sources */,
-				C7B5E0EB2A4F297200603CCF /* ConstraintMakerEditable.swift in Sources */,
 				C7E70CB42A45396C00C6F285 /* AppDelegate.swift in Sources */,
-				C7B5E0372A4DC3CE00603CCF /* FontChooserContainerView.swift in Sources */,
-				C7B5E0F62A4F297200603CCF /* ConstraintDirectionalInsets.swift in Sources */,
-				C7B5E0DA2A4F297200603CCF /* ConstraintPriorityTarget.swift in Sources */,
-				C7B5E0EA2A4F297200603CCF /* ConstraintOffsetTarget.swift in Sources */,
-				C7B5E0EE2A4F297200603CCF /* ConstraintLayoutGuideDSL.swift in Sources */,
 				C7E70CB62A45396C00C6F285 /* SceneDelegate.swift in Sources */,
-				C7B5E0DE2A4F297200603CCF /* ConstraintMakerExtendable.swift in Sources */,
 				C7B01BA42A4D45E000595EA7 /* EditorImageViewController.swift in Sources */,
-				C7B5E0ED2A4F297200603CCF /* ConstraintRelation.swift in Sources */,
-				C7B5E0DF2A4F297200603CCF /* ConstraintPriority.swift in Sources */,
-				C7B5E0D42A4F297200603CCF /* ConstraintMultiplierTarget.swift in Sources */,
-				C7B5E0D62A4F297200603CCF /* ConstraintDescription.swift in Sources */,
-				C7B5E0F22A4F297200603CCF /* Debugging.swift in Sources */,
-				C7B5E0EF2A4F297200603CCF /* ConstraintView+Extensions.swift in Sources */,
-				C7B5E0E02A4F297200603CCF /* ConstraintInsetTarget.swift in Sources */,
-				C7B5E0E72A4F297200603CCF /* ConstraintLayoutSupport.swift in Sources */,
-				C7B5E0E42A4F297200603CCF /* UILayoutSupport+Extensions.swift in Sources */,
-				C7B5E0D52A4F297200603CCF /* LayoutConstraintItem.swift in Sources */,
-				C7B5E0F02A4F297200603CCF /* ConstraintItem.swift in Sources */,
-				C7B5E0F52A4F297200603CCF /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				C7B5E0E62A4F297200603CCF /* ConstraintLayoutGuide.swift in Sources */,
-				C7B5E0E32A4F297200603CCF /* ConstraintConfig.swift in Sources */,
-				C7B5E0F42A4F297200603CCF /* LayoutConstraint.swift in Sources */,
-				C7B5E0DD2A4F297200603CCF /* ConstraintDSL.swift in Sources */,
-				C7B5E0E92A4F297200603CCF /* ConstraintConstantTarget.swift in Sources */,
-				C7B5E0E12A4F297200603CCF /* ConstraintDirectionalInsetTarget.swift in Sources */,
-				C7B5E0F32A4F297200603CCF /* ConstraintRelatableTarget.swift in Sources */,
-				C7B5E0DC2A4F297200603CCF /* ConstraintMakerFinalizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = XSH88V68U6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageEditor/Info.plist;
@@ -871,7 +625,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = XSH88V68U6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImageEditor/Info.plist;

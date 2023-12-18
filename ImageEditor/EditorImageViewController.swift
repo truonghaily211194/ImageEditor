@@ -60,12 +60,6 @@ class EditorImageViewController: UIViewController {
         createBarButton()
         addIndicator()
 
-        ZLImageEditorConfiguration.default()
-            .fontChooserContainerView(FontChooserContainerView())
-            .editImageTools([.draw, .clip, .imageSticker, .textSticker, .mosaic, .filter, .adjust])
-            .adjustTools([.brightness, .contrast, .saturation])
-            .canRedo(true)
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -104,14 +98,14 @@ class EditorImageViewController: UIViewController {
     }
 
     @IBAction func saveImageToAlbum(_ sender: Any) {
-        let isPurchased = UserDefaults.standard.bool(forKey: "In-AppPurchase")
-        if isPurchased {
+//        let isPurchased = UserDefaults.standard.bool(forKey: "In-AppPurchase")
+//        if isPurchased {
             UIImageWriteToSavedPhotosAlbum(previewImageView.image ?? image2, self, #selector(saveDone), nil)
-        } else {
-            DispatchQueue.main.async {
-                self.verifyBeforeBuy()
-            }
-        }
+//        } else {
+//            DispatchQueue.main.async {
+//                self.verifyBeforeBuy()
+//            }
+//        }
     }
 
     @IBAction func switchImage(_ sender: UISwitch) {
